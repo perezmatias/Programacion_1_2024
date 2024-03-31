@@ -1,0 +1,12 @@
+from libro import Libro as libroresources
+from libro import Libros as librosresources
+from prestamo import Prestamo as prestamoresources
+from prestamo import Prestamos as prestamosresources
+from usuario import Usuario as usuarioresources
+from usuario import Usuarios as usuariosresources
+from valoracion import Valoracion as valoracionresources
+from notificaciones import Notificacion as notificacionresources
+from login import Login as loginresources
+from signin import Signin as signinresources
+from configuracion import Configuracion as configuracionresources
+from comentarios import Comentario as comentarioreources
