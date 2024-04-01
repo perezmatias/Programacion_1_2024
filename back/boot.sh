@@ -1,4 +1,3 @@
 source venv/bin/activate
 
-python3 back/app.py
-```
+python3 app.py

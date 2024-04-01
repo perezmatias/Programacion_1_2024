@@ -2,8 +2,8 @@
 /include
 /lib
 /lib64
-
 /venv
 .env
 pyvenv.cfg
 src
+**__pycache__

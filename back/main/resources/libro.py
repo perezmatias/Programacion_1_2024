@@ -3,15 +3,15 @@ from flask import request
 
 LIBROS = {
 
-    '1': {
+    1: {
         'titulo': 'Python',
         'autor': '<NAME>'
     },
-    '2': {
+    2: {
         'titulo': 'C++',
         'autor': '<NAME>'
     },
-    '3': {
+    3: {
         'titulo': 'Java',
         'autor': '<NAME>'
     },
@@ -19,19 +19,19 @@ LIBROS = {
 
 class Libro(Resource):
     def get(self, id):
-        if int(id) in self.LIBROS:
-            return self.LIBROS[int(id)]
+        if int(id) in LIBROS:
+            return LIBROS[int(id)]
         return 'No existe el id', 404
 
     def delete(self, id):
-        if int(id) in self.LIBROS:
-            del self.LIBROS[int(id)]
+        if int(id) in LIBROS:
+            del LIBROS[int(id)]
             return '', 204
         return 'No existe el id', 404
 
     def put(self, id):
         if int(id) in LIBROS:
-            Libro=LIBROS[int(id)]
+            Libro = LIBROS[int(id)]
             data = request.get_json()
             Libro.update(data)
             return "", 201
@@ -42,8 +42,7 @@ class Libros(Resource):
         return LIBROS
     
     def post(self):
-        data = request.get_json()
-        Libros.update(data)
+        Libro = request.get_json()
         id = int(max(LIBROS.keys())) + 1
         LIBROS[id] = Libro
         return LIBROS[id], 201

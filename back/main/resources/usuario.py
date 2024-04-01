@@ -2,17 +2,17 @@ from flask_restful import Resource
 from flask import request
 
 USUARIOS = {
-    '1': {
+    1: {
         'nombre': 'Juan',
         'apellidos': 'Pérez',
         'edad': 25
     },
-    '2': {
+    2: {
         'nombre': 'Pedro',
         'apellidos': 'Pérez',
         'edad': 25
     },
-    '3': {
+    3: {
         'nombre': 'Jose',
         'apellidos': 'Pérez',
         'edad': 25
@@ -44,8 +44,7 @@ class Usuarios(Resource):
         return USUARIOS
     
     def post(self):
-        data = request.get_json()
-        Usuarios.update(data)
+        Usuario = request.get_json()
         id = int(max(USUARIOS.keys())) + 1
         USUARIOS[id] = Usuario
         return USUARIOS[id], 201

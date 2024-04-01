@@ -2,19 +2,19 @@ from flask_restful import Resource
 from flask import request
 
 PRESTAMOS = {
-    '1': {
+    1: {
         'id_libro': '1',
         'id_usuario': '1',
         'fecha_prestamo': '2021-10-01',
         'fecha_devolucion': '2021-10-15'
     },
-    '2': {
+    2: {
         'id_libro': '2',
         'id_usuario': '2',
         'fecha_prestamo': '2021-10-01',
         'fecha_devolucion': '2021-10-15'
     },
-    '3': {
+    3: {
         'id_libro': '3',
         'id_usuario': '3',
         'fecha_prestamo': '2021-10-01',
@@ -48,8 +48,7 @@ class Prestamos(Resource):
         return PRESTAMOS
     
     def post(self):
-        data = request.get_json()
-        Prestamos.update(data)
+        Prestamo = request.get_json()
         id = int(max(PRESTAMOS.keys())) + 1
         PRESTAMOS[id] = Prestamo
         return PRESTAMOS[id], 201
