@@ -19,4 +19,4 @@ class Configuracion(Resource):
                 CONFIGURACION[1].update(data)
                 return CONFIGURACION[1], 201
             else:
-                 return {'message': 'No hay configuración existente'}, 404
+                return {'message': 'No hay configuración existente'}, 404
