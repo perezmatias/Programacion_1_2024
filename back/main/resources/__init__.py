@@ -8,7 +8,6 @@ from .valoracion import Valoracion as ValoracionResources
 from .notificaciones import Notificacion as NotificacionResources
 from .login import Login as LoginResources
 from .signin import Signin as SigninResources
-from .configuracion import Configuracion as ConfiguracionResources
-from .comentarios import Comentario as ComentarioReources
 from .valoracion import Valoraciones as ValoracionesResources
-from .comentarios import Comentarios as ComentariosResources
+from .autor import Autor as AutorResources
+from .autor import Autores as AutoresResources
