@@ -2,6 +2,7 @@ from flask_restful import Resource
 from flask import request, jsonify
 from .. import db
 from main.models import PrestamoModel
+from datetime import datetime
 
 #PRESTAMOS = {
 #    1: {
@@ -45,10 +46,12 @@ class Prestamo(Resource):
     
     def put(self, id):
         prestamo = db.session.query(PrestamoModel).get_or_404(id)
-        data = request.get_json().items()
-        for key, value in data:
-            setattr(prestamo, key, value)
-        db.session.add(prestamo)
+        data = request.get_json()
+        for key, value in data.items():
+            if key in ['Fecha_retiro', 'Fecha_devolucion']:
+                setattr(prestamo, key, datetime.strptime(value, '%d-%m-%Y'))
+            else:
+                setattr(prestamo, key, value)
         db.session.commit()
         return prestamo.to_json() , 201
     #    if int(id) in PRESTAMOS:
