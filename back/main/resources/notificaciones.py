@@ -24,6 +24,10 @@ class Notificacion(Resource):
         db.session.add(notificacion)
         db.session.commit()
         return notificacion.to_json(), 201
+    
+    def get(self):
+        notificaciones = db.session.query(NotificacionModel).all()
+        return jsonify([notificacion.to_json() for notificacion in notificaciones])
     #    Notificacion = request.get_json()
     #    id = int(max(NOTIFICACIONES.keys())) + 1
     #    NOTIFICACIONES[id] = Notificacion

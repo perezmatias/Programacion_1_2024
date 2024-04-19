@@ -5,13 +5,23 @@ class Notificacion(db.Model):
     id_usuario = db.Column(db.Integer)
     descripcion = db.Column(db.String(100), nullable = False)
 
+    def __repr__(self):
+        return '<Notificacion: {}>'.format(self.descripcion)
     
-    #Convertir objeto en JSON
     def to_json(self):
-        Notificacion_json = {
+        notificacion_json = {
             'id': self.id,
             'id_usuario': self.id_usuario,
-            'descripcion': str(self.descripcion),
-
+            'descripcion': self.descripcion,
         }
-        return Notificacion_json
+        return notificacion_json
+
+    def to_json_short(self):
+        return self.to_json()
+
+    @staticmethod
+    def from_json(notificacion_json):
+        id = notificacion_json.get('id')
+        id_usuario = notificacion_json.get('id_usuario')
+        descripcion = notificacion_json.get('descripcion')
+        return Notificacion(id=id, id_usuario=id_usuario, descripcion=descripcion)

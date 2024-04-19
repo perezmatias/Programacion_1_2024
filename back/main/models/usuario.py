@@ -9,16 +9,32 @@ class Usuario(db.Model):
     contraseña = db.Column(db.String(100), nullable = False)
     rol = db.Column(db.String(100), nullable = False)
     
-    #Convertir objeto en JSON
+    def __repr__(self):
+        return '<Usuario: {} {}>'.format(self.nombre, self.apellido)
+    
     def to_json(self):
-        Usuario_json = {
+        usuario_json = {
             'id': self.id,
-            'nombre': str(self.nombre),
-            'apellido': str(self.apellido),
-            'email': str(self.email),
-            'telefono': str(self.telefono),
-            'contraseña': str(self.contraseña),
-            'rol': str(self.rol),
-
+            'nombre': self.nombre,
+            'apellido': self.apellido,
+            'email': self.email,
+            'telefono': self.telefono,
+            'contraseña': self.contraseña,
+            'rol': self.rol
         }
-        return Usuario_json
+        return usuario_json
+
+    def to_json_short(self):
+        return self.to_json()
+
+    @staticmethod
+    def from_json(usuario_json):
+        id = usuario_json.get('id')
+        nombre = usuario_json.get('nombre')
+        apellido = usuario_json.get('apellido')
+        email = usuario_json.get('email')
+        telefono = usuario_json.get('telefono')
+        contraseña = usuario_json.get('contraseña')
+        rol = usuario_json.get('rol')
+        return Usuario(id=id, nombre=nombre, apellido=apellido, email=email,
+                        telefono=telefono, contraseña=contraseña, rol=rol)

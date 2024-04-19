@@ -7,14 +7,27 @@ class Libro(db.Model):
     autor = db.Column(db.String(100), nullable = False)
     cant_ejemplares = db.Column(db.Integer)
     
-    #Convertir objeto en JSON
+    def __repr__(self):
+        return '<Libro: {}>'.format(self.nombre)
+    
     def to_json(self):
-        Libro_json = {
+        libro_json = {
             'id': self.id,
-            'genero': str(self.genero),
-            'nombre': str(self.nombre),
-            'autor': str(self.autor),
-            'cant_ejemplares': str(self.cant_ejemplares),
-
+            'nombre': self.nombre,
+            'genero': self.genero,
+            'autor': self.autor,
+            'cant_ejemplares': self.cant_ejemplares
         }
-        return Libro_json
+        return libro_json
+
+    def to_json_short(self):
+        return self.to_json()
+
+    @staticmethod
+    def from_json(libro_json):
+        id = libro_json.get('id')
+        nombre = libro_json.get('nombre')
+        genero = libro_json.get('genero')
+        autor = libro_json.get('autor')
+        cant_ejemplares = libro_json.get('cant_ejemplares')
+        return Libro(id=id, nombre=nombre, genero=genero, autor=autor, cant_ejemplares=cant_ejemplares)
