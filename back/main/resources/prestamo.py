@@ -1,54 +1,76 @@
 from flask_restful import Resource
-from flask import request
+from flask import request, jsonify
+from .. import db
+from main.models import PrestamoModel
 
-PRESTAMOS = {
-    1: {
-        'id_libro': '1',
-        'id_usuario': '1',
-        'fecha_prestamo': '2021-10-01',
-        'fecha_devolucion': '2021-10-15'
-    },
-    2: {
-        'id_libro': '2',
-        'id_usuario': '2',
-        'fecha_prestamo': '2021-10-01',
-        'fecha_devolucion': '2021-10-15'
-    },
-    3: {
-        'id_libro': '3',
-        'id_usuario': '3',
-        'fecha_prestamo': '2021-10-01',
-        'fecha_devolucion': '2021-10-15'
-    }
-}
+#PRESTAMOS = {
+#    1: {
+#        'id_libro': '1',
+#        'id_usuario': '1',
+#        'fecha_prestamo': '2021-10-01',
+#        'fecha_devolucion': '2021-10-15'
+#    },
+#    2: {
+#        'id_libro': '2',
+#        'id_usuario': '2',
+#        'fecha_prestamo': '2021-10-01',
+#        'fecha_devolucion': '2021-10-15'
+#    },
+#    3: {
+#        'id_libro': '3',
+#        'id_usuario': '3',
+#        'fecha_prestamo': '2021-10-01',
+#        'fecha_devolucion': '2021-10-15'
+#    }
+#}
 
 
 class Prestamo(Resource):
     def get(self, id):
-        if int(id) in PRESTAMOS:
-            return PRESTAMOS[int(id)]
-        return 'No existe el id', 404
+        prestamo = db.session.query(PrestamoModel).get_or_404(id)
+        return prestamo.to_json()
+    #    if int(id) in PRESTAMOS:
+    #        return PRESTAMOS[int(id)]
+    #    return 'No existe el id', 404
     
     def delete(self, id):
-        if int(id) in PRESTAMOS:
-            del PRESTAMOS[int(id)]
-            return '', 204
-        return 'No existe el id', 404
+        prestamo = db.session.query(PrestamoModel).get_or_404(id)
+        db.session.delete(prestamo)
+        db.session.commit()
+        return prestamo.to_json(), 204
+    #    if int(id) in PRESTAMOS:
+    #        del PRESTAMOS[int(id)]
+    #        return '', 204
+    #    return 'No existe el id', 404
     
     def put(self, id):
-        if int(id) in PRESTAMOS:
-            Prestamo=PRESTAMOS[int(id)]
-            data = request.get_json()
-            Prestamo.update(data)
-            return "", 201
-        return "No existe el id", 404
+        prestamo = db.session.query(PrestamoModel).get_or_404(id)
+        data = request.get_json().items()
+        for key, value in data:
+            setattr(prestamo, key, value)
+        db.session.add(prestamo)
+        db.session.commit()
+        return prestamo.to_json() , 201
+    #    if int(id) in PRESTAMOS:
+    #        Prestamo=PRESTAMOS[int(id)]
+    #        data = request.get_json()
+    #        Prestamo.update(data)
+    #        return "", 201
+    #    return "No existe el id", 404
 
 class Prestamos(Resource):
     def get(self):
-        return PRESTAMOS
+        prestamos = db.session.query(PrestamoModel).all()
+        return jsonify([prestamo.to_json() for prestamo in prestamos])
+    #    return PRESTAMOS
     
     def post(self):
-        Prestamo = request.get_json()
-        id = int(max(PRESTAMOS.keys())) + 1
-        PRESTAMOS[id] = Prestamo
-        return PRESTAMOS[id], 201
+        prestamo = PrestamoModel.from_json(request.get_json())
+        db.session.add(prestamo)
+        db.session.commit()
+        return prestamo.to_json(), 201
+
+    #    Prestamo = request.get_json()
+    #    id = int(max(PRESTAMOS.keys())) + 1
+    #    PRESTAMOS[id] = Prestamo
+    #    return PRESTAMOS[id], 201

@@ -1,18 +1,18 @@
 from flask_restful import Resource
 from flask import request
 
-SIGNIN={
-    1: {
-        'username': 'admin',
-        'rol': 'admin',
-        'password': 'admin'
-    },
-    2: {
-        'username': 'user',
-        'rol': 'user',
-        'password': 'user'
-    },
-}
+#SIGNIN={
+#    1: {
+#        'username': 'admin',
+#        'rol': 'admin',
+#        'password': 'admin'
+#    },
+#    2: {
+#        'username': 'user',
+#        'rol': 'user',
+#        'password': 'user'
+#    },
+#}
 
 class Signin(Resource):
     def post(self):

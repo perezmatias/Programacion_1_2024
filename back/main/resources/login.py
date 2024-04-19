@@ -1,16 +1,16 @@
 from flask_restful import Resource
 from flask import request
 
-LOGIN={
-    1: {
-        'username': 'admin',
-        'password': 'admin'
-    },
-    2: {
-        'username': 'user',
-        'password': 'user'
-    },
-}
+#LOGIN={
+#    1: {
+#        'username': 'admin',
+#        'password': 'admin'
+#    },
+#    2: {
+#        'username': 'user',
+#        'password': 'user'
+#    },
+#}
 
 class Login(Resource):
     def post(self):
