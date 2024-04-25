@@ -1,6 +1,7 @@
 from .. import db 
 
 class Notificacion(db.Model):
+    __tablename__ = 'notificaciones'
     id = db.Column(db.Integer, primary_key=True)
     id_usuario = db.Column(db.Integer)
     descripcion = db.Column(db.String(100), nullable = False)

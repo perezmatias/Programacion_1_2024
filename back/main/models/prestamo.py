@@ -3,6 +3,7 @@ import json
 from datetime import datetime
 
 class Prestamo(db.Model):
+    __tablename__ = 'prestamos'
     id_prestamo = db.Column(db.Integer, primary_key=True)
     id_usuario = db.Column(db.Integer)
     id_libro = db.Column(db.Integer)

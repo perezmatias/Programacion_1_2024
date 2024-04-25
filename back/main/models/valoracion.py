@@ -1,6 +1,7 @@
 from .. import db 
 
 class Valoracion(db.Model):
+    __tablename__ = 'valoraciones'
     id = db.Column(db.Integer, primary_key=True)
     id_usuario = db.Column(db.Integer)
     id_libro = db.Column(db.Integer)
