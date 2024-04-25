@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "73b74e7d-b458-4a27-b9f0-25d5ed4c8a30",
+		"_postman_id": "0d8cf186-5e20-4cf6-8d59-4b62da26ca4a",
 		"name": "Grupo_h",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26916803"
@@ -38,7 +38,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Facundo\",\r\n    \"apellidos\": \"Mala\",\r\n    \"edad\": 25\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Jose\",\r\n    \"apellido\": \"Ledezma\",\r\n    \"email\": \"jledez@example.com\",\r\n    \"telefono\": 123454889,\r\n    \"contraseña\": \"contraseña_segura\",\r\n    \"rol\": \"usuario_regular\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -74,7 +74,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Pedro\",\r\n    \"apellidos\": \"Pérez\",\r\n    \"edad\": 30\r\n}",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Jose\",\r\n    \"apellido\": \"Mala\",\r\n    \"email\": \"jose23@example.com\",\r\n    \"telefono\": 123454889,\r\n    \"contraseña\": \"contraseña_segura\",\r\n    \"rol\": \"usuario_regular\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -128,7 +128,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/usuario/1",
+							"raw": "http://127.0.0.1:5000/usuario/3",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -139,7 +139,7 @@
 							"port": "5000",
 							"path": [
 								"usuario",
-								"1"
+								"3"
 							]
 						}
 					},
@@ -179,7 +179,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"Ruby\",\r\n    \"autor\": \"<NAME>\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Algebra\",\r\n    \"genero\": \"Ciencias basicas\",\r\n    \"autor\": \"Pablo B.\",\r\n    \"cant_ejemplares\": \"5\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -238,7 +238,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"C++ 2\",\r\n    \"autor\": \"<NAME>\"\r\n}",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Calculo 1\",\r\n    \"genero\": \"Matematico\",\r\n    \"autor\": \"Manuel B.\",\r\n    \"cant_ejemplares\": 10\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -269,7 +269,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/libro/2",
+							"raw": "http://127.0.0.1:5000/libro/3",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -280,7 +280,7 @@
 							"port": "5000",
 							"path": [
 								"libro",
-								"2"
+								"3"
 							]
 						}
 					},
@@ -392,7 +392,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_libro\": \"4\",\r\n    \"id_usuario\": \"1\",\r\n    \"fecha_prestamo\": \"2021-10-01\",\r\n    \"fecha_devolucion\": \"2021-10-15\"\r\n}",
+							"raw": "{\r\n    \"id_usuario\": 5,\r\n    \"id_libro\": 33,\r\n    \"Fecha_retiro\": \"10-04-2024\",\r\n    \"Fecha_devolucion\": \"12-04-2024\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -427,7 +427,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/prestamo/2",
+							"raw": "http://127.0.0.1:5000/prestamo/7",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -438,7 +438,7 @@
 							"port": "5000",
 							"path": [
 								"prestamo",
-								"2"
+								"7"
 							]
 						}
 					},
@@ -451,7 +451,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_libro\": \"2\",\r\n    \"id_usuario\": \"3\",\r\n    \"fecha_prestamo\": \"2021-10-01\",\r\n    \"fecha_devolucion\": \"2021-10-15\"\r\n}",
+							"raw": "{\r\n    \"id_prestamo\": 7,\r\n    \"id_usuario\": 5,\r\n    \"id_libro\": 8,\r\n    \"Fecha_retiro\": \"10-04-2024\",\r\n    \"Fecha_devolucion\": \"20-04-2024\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -459,7 +459,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/prestamo/2",
+							"raw": "http://127.0.0.1:5000/prestamo/7",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -470,7 +470,7 @@
 							"port": "5000",
 							"path": [
 								"prestamo",
-								"2"
+								"7"
 							]
 						}
 					},
@@ -482,7 +482,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/prestamo/2",
+							"raw": "http://127.0.0.1:5000/prestamo/8",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -493,7 +493,7 @@
 							"port": "5000",
 							"path": [
 								"prestamo",
-								"2"
+								"8"
 							]
 						}
 					},
@@ -511,7 +511,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"id_usuario\": \"1\",\r\n        \"mensaje\": \"Extension de Prestamo\"\r\n}",
+							"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"descripcion\": \"Aplazo\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -534,19 +534,14 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "Configuracion",
-			"item": [
+				},
 				{
-					"name": "Obtener Configuracion",
+					"name": "Listado Notificaciones",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/configuracion",
+							"raw": "http://127.0.0.1:5000/notificacion",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -556,38 +551,7 @@
 							],
 							"port": "5000",
 							"path": [
-								"configuracion"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Actualizar Configuracion",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n        \"nombre\": \"Inserte nombre\",\r\n        \"apertura\": \"8:00\",\r\n        \"cierre\": \"20:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:5000/configuracion",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "5000",
-							"path": [
-								"configuracion"
+								"notificacion"
 							]
 						}
 					},
@@ -650,7 +614,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_usuario\": \"1\",\r\n    \"id_libro\": \"4\",\r\n    \"valoracion\": \"5\"\r\n}",
+							"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"id_libro\": 9,\r\n    \"puntuacion\": 1,\r\n    \"comentario\": \"No lo recomiendo.\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -677,15 +641,15 @@
 			]
 		},
 		{
-			"name": "Comentario",
+			"name": "Autor",
 			"item": [
 				{
-					"name": "Obtener Comentario",
+					"name": "Listado Autores",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/comentario/2",
+							"raw": "http://127.0.0.1:5000/autores",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -695,7 +659,29 @@
 							],
 							"port": "5000",
 							"path": [
-								"comentario",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/autor/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"autor",
 								"2"
 							]
 						}
@@ -703,35 +689,13 @@
 					"response": []
 				},
 				{
-					"name": "Listado de Comentarios",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:5000/comentarios",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "5000",
-							"path": [
-								"comentarios"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Agregar  Comentario",
+					"name": "Agregar Autor",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_usuario\": \"5\",\r\n    \"id_libro\": \"1\",\r\n    \"comentario\": \"Hay mejores\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Miguel\",\r\n    \"apellido\": \"Angelo\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -739,7 +703,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/comentarios",
+							"raw": "http://127.0.0.1:5000/autores",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -749,7 +713,7 @@
 							],
 							"port": "5000",
 							"path": [
-								"comentarios"
+								"autores"
 							]
 						}
 					},
