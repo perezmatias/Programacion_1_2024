@@ -11,3 +11,5 @@ from .signin import Signin as SigninResources
 from .valoracion import Valoraciones as ValoracionesResources
 from .autor import Autor as AutorResources
 from .autor import Autores as AutoresResources
+from .prestamos_libros import Prestamos_libros as Prestamos_librosResources
+from .autores_libros import Autores_libros as Autores_librosResources

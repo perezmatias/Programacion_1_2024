@@ -27,7 +27,8 @@ class Prestamo(db.Model):
             'id_usuario': self.id_usuario,
             'id_libro': self.id_libro,
             'Fecha_retiro': self.Fecha_retiro.strftime("%d-%m-%Y"),
-            'Fecha_devolucion': self.Fecha_devolucion.strftime("%d-%m-%Y")
+            'Fecha_devolucion': self.Fecha_devolucion.strftime("%d-%m-%Y"),
+            'libros' : [libro.to_json() for libro in self.libros]
         }
         return prestamo_json
 

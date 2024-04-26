@@ -22,7 +22,7 @@ from main.models import LibroModel
 class Libro(Resource):
     def get(self, id):
         libro = db.session.query(LibroModel).get_or_404(id)
-        return libro.to_json()
+        return libro.to_json_complete()
     #    if int(id) in LIBROS:
     #        return LIBROS[int(id)]
     #    return 'No existe el id', 404

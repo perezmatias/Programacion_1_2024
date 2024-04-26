@@ -29,6 +29,21 @@ class Usuario(db.Model):
             'rol': self.rol
         }
         return usuario_json
+    
+    def to_json_complete(self):
+        prestamos = [prestamo.to_json() for prestamo in self.prestamos]
+        prestamo_json = {
+            'id': self.id,
+            'nombre': self.nombre,
+            'apellido': self.apellido,
+            'email': self.email,
+            'telefono': self.telefono,
+            'contraseña': self.contraseña,
+            'rol': self.rol,
+            'prestamos':prestamos
+
+        }
+        return prestamo_json
 
     def to_json_short(self):
         return self.to_json()

@@ -21,6 +21,7 @@ class Autor(db.Model):
             'id': self.id,
             'nombre': self.nombre,
             'apellido': self.apellido,
+            'libros' : [libro.to_json() for libro in self.libros]
         }
         return autor_json
 

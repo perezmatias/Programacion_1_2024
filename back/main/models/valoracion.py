@@ -23,6 +23,19 @@ class Valoracion(db.Model):
             'valoracion': self.valoracion
         }
         return valoracion_json
+    
+    def to_json_complete(self):
+        libros = [libro.to_json() for libro in self.libros]
+        libro_json = {
+            'id': self.id,
+            'id_usuario': self.id_usuario,
+            'id_libro': self.id_libro,
+            'comentario': self.comentario,
+            'valoracion': self.valoracion,
+            'libros':libros
+
+        }
+        return libro_json
 
     def to_json_short(self):
         return self.to_json()

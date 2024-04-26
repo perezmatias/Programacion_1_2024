@@ -24,7 +24,7 @@ from main.models import UsuarioModel
 class Usuario(Resource):
     def get(self, id):
         usuario = db.session.query(UsuarioModel).get_or_404(id)
-        return usuario.to_json()
+        return usuario.to_json_complete()
     #    if int(id) in USUARIOS:
     #        return USUARIOS[int(id)]
     #    return 'No existe el id', 404
