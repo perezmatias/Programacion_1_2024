@@ -9,7 +9,12 @@ class Usuario(db.Model):
     telefono = db.Column(db.Integer)
     contraseña = db.Column(db.String(100), nullable = False)
     rol = db.Column(db.String(100), nullable = False)
-    
+
+    notificaciones = db.relationship("Notificacion", back_populates="usuarios",cascade="all, delete-orphan")
+    valoraciones = db.relationship("Valoracion", back_populates="usuarios",cascade="all, delete-orphan")
+    prestamos = db.relationship("Prestamo", back_populates="usuarios",cascade="all, delete-orphan")
+
+
     def __repr__(self):
         return '<Usuario: {} {}>'.format(self.nombre, self.apellido)
     

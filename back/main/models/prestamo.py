@@ -2,13 +2,21 @@ from .. import db
 import json
 from datetime import datetime
 
+prestamos_libros = db.Table("prestamos_libros",
+    db.Column("id_libro",db.Integer,db.ForeignKey("libros.id"),primary_key=True),
+    db.Column("id_prestamo",db.Integer,db.ForeignKey("prestamos.id"),primary_key=True)
+    )
+
 class Prestamo(db.Model):
     __tablename__ = 'prestamos'
-    id_prestamo = db.Column(db.Integer, primary_key=True)
-    id_usuario = db.Column(db.Integer)
-    id_libro = db.Column(db.Integer)
+    id = db.Column(db.Integer, primary_key=True)
+    id_usuario = db.Column(db.Integer, db.ForeignKey("usuarios.id"))
     Fecha_retiro = db.Column(db.DateTime, nullable = False)
     Fecha_devolucion = db.Column(db.DateTime, nullable = False)
+
+    usuarios = db.relationship("Usuario", back_populates="prestamos", uselist=False, single_parent=True)
+
+    libros = db.relationship('Libro', secondary=prestamos_libros, backref=db.backref('prestamos', lazy='dynamic'))
     
     def __repr__(self):
         return '<Prestamo: {}>'.format(self.id_prestamo)

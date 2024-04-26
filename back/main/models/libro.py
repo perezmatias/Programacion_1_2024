@@ -7,6 +7,8 @@ class Libro(db.Model):
     genero = db.Column(db.String(100), nullable = False)
     autor = db.Column(db.String(100), nullable = False)
     cant_ejemplares = db.Column(db.Integer)
+
+    valoraciones = db.relationship("Valoracion", back_populates="libros",cascade="all, delete-orphan")
     
     def __repr__(self):
         return '<Libro: {}>'.format(self.nombre)

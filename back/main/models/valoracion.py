@@ -3,10 +3,13 @@ from .. import db
 class Valoracion(db.Model):
     __tablename__ = 'valoraciones'
     id = db.Column(db.Integer, primary_key=True)
-    id_usuario = db.Column(db.Integer)
-    id_libro = db.Column(db.Integer)
+    id_usuario = db.Column(db.Integer, db.ForeignKey("usuarios.id"),nullable=False)
+    id_libro = db.Column(db.Integer, db.ForeignKey("libros.id"),nullable=False)
     comentario = db.Column(db.String(100), nullable = False)
     valoracion = db.Column(db.Integer)
+
+    usuarios = db.relationship("Usuario", back_populates="valoraciones", uselist=False, single_parent=True)
+    libros = db.relationship("Libro", back_populates="valoraciones", uselist=False, single_parent=True)
 
     def __repr__(self):
         return '<Valoracion: {}>'.format(self.id)

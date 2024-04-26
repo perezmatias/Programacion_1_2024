@@ -1,10 +1,17 @@
 from .. import db 
 
+autores_libros = db.Table("autores_libros",
+    db.Column("id_libro",db.Integer,db.ForeignKey("libros.id"),primary_key=True),
+    db.Column("id_autor",db.Integer,db.ForeignKey("autores.id"),primary_key=True)
+    )
+
 class Autor(db.Model):
     __tablename__ = 'autores'
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100), nullable = False)
     apellido = db.Column(db.String(100), nullable = False)
+
+    libros = db.relationship('Libro', secondary=autores_libros, backref=db.backref('autores', lazy='dynamic'))
 
     def __repr__(self):
         return '<Autor: {} {}>'.format(self.nombre, self.apellido)
