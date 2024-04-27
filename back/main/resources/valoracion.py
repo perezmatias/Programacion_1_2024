@@ -24,7 +24,7 @@ from main.models import ValoracionModel
 class Valoracion(Resource):
     def get(self, id):
         valoracion = db.session.query(ValoracionModel).get_or_404(id)
-        return valoracion.to_json_complete()
+        return valoracion.to_json()
     #    if int(id) in VALORACIONES:
     #        return VALORACIONES[int(id)]
     #    return 'No existe el id', 404

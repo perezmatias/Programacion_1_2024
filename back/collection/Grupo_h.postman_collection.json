@@ -38,7 +38,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Jose\",\r\n    \"apellido\": \"Ledezma\",\r\n    \"email\": \"jledez@example.com\",\r\n    \"telefono\": 123454889,\r\n    \"contraseña\": \"contraseña_segura\",\r\n    \"rol\": \"usuario_regular\"\r\n}\r\n",
+							"raw": "{\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\": \"Pascal\",\r\n    \"email\": \"Pedro@example.com\",\r\n    \"telefono\": 123454649,\r\n    \"contraseña\": \"contraseña_segura\",\r\n    \"rol\": \"usuario_regular\",\r\n    \"prestamos\": []\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -74,7 +74,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Jose\",\r\n    \"apellido\": \"Mala\",\r\n    \"email\": \"jose23@example.com\",\r\n    \"telefono\": 123454889,\r\n    \"contraseña\": \"contraseña_segura\",\r\n    \"rol\": \"usuario_regular\"\r\n}",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\": \"Pascal\",\r\n    \"email\": \"Pedro1@example.com\",\r\n    \"telefono\": 123454649,\r\n    \"contraseña\": \"contraseña_segura\",\r\n    \"rol\": \"usuario_regular\",\r\n    \"prestamos\": []\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -128,7 +128,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/usuario/3",
+							"raw": "http://127.0.0.1:5000/usuario/2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -139,7 +139,7 @@
 							"port": "5000",
 							"path": [
 								"usuario",
-								"3"
+								"2"
 							]
 						}
 					},
@@ -179,7 +179,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Algebra\",\r\n    \"genero\": \"Ciencias basicas\",\r\n    \"autor\": \"Pablo B.\",\r\n    \"cant_ejemplares\": \"5\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Calculo 1\",\r\n    \"genero\": \"Ciencias basicas\",\r\n    \"autor\": \"Carlos Bodoque\",\r\n    \"cant_ejemplares\": \"10\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -238,7 +238,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Calculo 1\",\r\n    \"genero\": \"Matematico\",\r\n    \"autor\": \"Manuel B.\",\r\n    \"cant_ejemplares\": 10\r\n}",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Calculo 1\",\r\n    \"genero\": \"Ciencias basicas\",\r\n    \"autor\": \"Carlos Bodoque\",\r\n    \"cant_ejemplares\": 9,\r\n    \"valoraciones\": []\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -392,7 +392,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_usuario\": 5,\r\n    \"id_libro\": 33,\r\n    \"Fecha_retiro\": \"10-04-2024\",\r\n    \"Fecha_devolucion\": \"12-04-2024\"\r\n}",
+							"raw": "{\r\n    \"id_usuario\": 2,\r\n    \"Fecha_retiro\": \"10-04-2024\",\r\n    \"Fecha_devolucion\": \"12-04-2024\",\r\n    \"libros\": []\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -427,7 +427,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/prestamo/7",
+							"raw": "http://127.0.0.1:5000/prestamo/2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -438,7 +438,7 @@
 							"port": "5000",
 							"path": [
 								"prestamo",
-								"7"
+								"2"
 							]
 						}
 					},
@@ -451,7 +451,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_prestamo\": 7,\r\n    \"id_usuario\": 5,\r\n    \"id_libro\": 8,\r\n    \"Fecha_retiro\": \"10-04-2024\",\r\n    \"Fecha_devolucion\": \"20-04-2024\"\r\n}",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"id_usuario\": 2,\r\n    \"Fecha_retiro\": \"10-04-2024\",\r\n    \"Fecha_devolucion\": \"12-04-2024\",\r\n    \"libros\": []\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -511,7 +511,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"descripcion\": \"Aplazo\"\r\n}\r\n",
+							"raw": "{\r\n    \"id_usuario\": 2,\r\n    \"descripcion\": \"Sin aviso\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -568,7 +568,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/valoracion/2",
+							"raw": "http://127.0.0.1:5000/valoracion/3",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -579,7 +579,7 @@
 							"port": "5000",
 							"path": [
 								"valoracion",
-								"2"
+								"3"
 							]
 						}
 					},
@@ -614,7 +614,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"id_libro\": 9,\r\n    \"puntuacion\": 1,\r\n    \"comentario\": \"No lo recomiendo.\"\r\n}\r\n",
+							"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"id_libro\": 2,\r\n    \"valoracion\": 9,\r\n    \"comentario\": \"Lo recomiendo.\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -695,7 +695,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Miguel\",\r\n    \"apellido\": \"Angelo\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Albert\",\r\n    \"apellido\": \"E.\",\r\n    \"libros\": []\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -714,6 +714,73 @@
 							"port": "5000",
 							"path": [
 								"autores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tablas Intermedias",
+			"item": [
+				{
+					"name": "Prestamo_libro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_libro\": \"2\",\r\n    \"id_prestamo\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/preslibro",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"preslibro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Autores_libros",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_libro\": \"2\",\r\n    \"id_autor\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/autolibro",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"autolibro"
 							]
 						}
 					},

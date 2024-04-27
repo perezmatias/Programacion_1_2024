@@ -19,13 +19,12 @@ class Prestamo(db.Model):
     libros = db.relationship('Libro', secondary=prestamos_libros, backref=db.backref('prestamos', lazy='dynamic'))
     
     def __repr__(self):
-        return '<Prestamo: {}>'.format(self.id_prestamo)
+        return '<Prestamo: {}>'.format(self.id)
     
     def to_json(self):
         prestamo_json = {
-            'id_prestamo': self.id_prestamo,
+            'id': self.id,
             'id_usuario': self.id_usuario,
-            'id_libro': self.id_libro,
             'Fecha_retiro': self.Fecha_retiro.strftime("%d-%m-%Y"),
             'Fecha_devolucion': self.Fecha_devolucion.strftime("%d-%m-%Y"),
             'libros' : [libro.to_json() for libro in self.libros]
@@ -37,13 +36,11 @@ class Prestamo(db.Model):
 
     @staticmethod
     def from_json(prestamo_json):
-        id_prestamo = prestamo_json.get('id_prestamo')
+        id = prestamo_json.get('id')
         id_usuario = prestamo_json.get('id_usuario')
-        id_libro = prestamo_json.get('id_libro')
         Fecha_retiro = datetime.strptime(prestamo_json.get('Fecha_retiro'), '%d-%m-%Y')
         Fecha_devolucion = datetime.strptime(prestamo_json.get('Fecha_devolucion'), '%d-%m-%Y')
-        return Prestamo(id_prestamo = id_prestamo,
+        return Prestamo(id = id,
                         id_usuario = id_usuario,
-                        id_libro = id_libro,
                         Fecha_retiro = Fecha_retiro,
                         Fecha_devolucion = Fecha_devolucion)
