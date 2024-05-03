@@ -1,7 +1,8 @@
 from flask_restful import Resource
 from flask import request, jsonify
 from .. import db
-from main.models import LibroModel
+from main.models import LibroModel, Autores_librosModel
+from sqlalchemy import func, desc
 
 #LIBROS = {
 
@@ -54,6 +55,27 @@ class Libro(Resource):
 
 class Libros(Resource):
     def get(self):
+        page = 1
+        per_page = 10
+        libros = db.session.query(LibroModel)
+        if request.args.get('page'):
+            page = int(request.args.get('page'))
+        if request.args.get('per_page'):
+            per_page = int(request.args.get('per_page'))
+        
+        if request.args.get('genero'):
+            libros=libros.filter(LibroModel.genero.like("%"+request.args.get('genero')+"%"))
+
+        libros=libros.paginate(page=page, per_page=per_page, error_out=True)
+        return jsonify({'libros': [libro.to_json() for libro in libros],
+                        'total': libros.total,
+                        'pages': libros.pages,
+                        'page': page
+                    })
+
+
+
+
         libros = db.session.query(LibroModel).all()
         return jsonify([libro.to_json() for libro in libros])
     #    return LIBROS
