@@ -2,6 +2,7 @@ from flask_restful import Resource
 from flask import request, jsonify
 from .. import db
 from main.models import ValoracionModel
+from sqlalchemy import func, desc
 
 #VALORACIONES = {
 #    1: {
@@ -31,8 +32,22 @@ class Valoracion(Resource):
     
 class Valoraciones(Resource):
     def get(self):
-        valoraciones = db.session.query(ValoracionModel).all()
-        return jsonify([valoracion.to_json() for valoracion in valoraciones])
+        page = 1
+        per_page = 10
+        valoraciones = db.session.query(ValoracionModel)
+        if request.args.get('page'):
+            page = int(request.args.get('page'))
+        if request.args.get('per_page'):
+            per_page = int(request.args.get('per_page'))
+        valoraciones = valoraciones.paginate(page=page, per_page=per_page, error_out=True)
+
+        return jsonify({'valoraciones': [valoracion.to_json() for valoracion in valoraciones],
+                        'total': valoraciones.total,
+                        'pages': valoraciones.pages,
+                        'page': page
+                    })
+        #valoraciones = db.session.query(ValoracionModel).all()
+        #return jsonify([valoracion.to_json() for valoracion in valoraciones])
     #    return VALORACIONES
     
     def post(self):

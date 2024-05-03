@@ -156,7 +156,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/libros",
+							"raw": "http://127.0.0.1:5000/libros?autor_apellido=E.",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -167,6 +167,12 @@
 							"port": "5000",
 							"path": [
 								"libros"
+							],
+							"query": [
+								{
+									"key": "autor_apellido",
+									"value": "E."
+								}
 							]
 						}
 					},
@@ -369,7 +375,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/prestamos",
+							"raw": "http://127.0.0.1:5000/prestamos?apellido=pascal",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -380,6 +386,12 @@
 							"port": "5000",
 							"path": [
 								"prestamos"
+							],
+							"query": [
+								{
+									"key": "apellido",
+									"value": "pascal"
+								}
 							]
 						}
 					},

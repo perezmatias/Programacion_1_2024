@@ -5,7 +5,6 @@ class Libro(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100), nullable = False)
     genero = db.Column(db.String(100), nullable = False)
-    autor = db.Column(db.String(100), nullable = False)
     cant_ejemplares = db.Column(db.Integer)
 
     valoraciones = db.relationship("Valoracion", back_populates="libros",cascade="all, delete-orphan")
@@ -18,7 +17,6 @@ class Libro(db.Model):
             'id': self.id,
             'nombre': self.nombre,
             'genero': self.genero,
-            'autor': self.autor,
             'cant_ejemplares': self.cant_ejemplares
         }
         return libro_json
@@ -29,7 +27,6 @@ class Libro(db.Model):
             'id': self.id,
             'nombre': self.nombre,
             'genero': self.genero,
-            'autor': self.autor,
             'cant_ejemplares': self.cant_ejemplares,
             'valoraciones':valoraciones
 
