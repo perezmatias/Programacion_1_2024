@@ -12,6 +12,16 @@
 				{
 					"name": "Listado Usuarios",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNjg1NDY4OCwianRpIjoiZjJkYjAyYzItZjkwZi00NzY0LTg5YmMtODFmMzI1ZWYwZGY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NCwibmJmIjoxNzE2ODU0Njg4LCJjc3JmIjoiMmY0ZDY4Y2UtZmU2OS00OWJmLTk3M2YtOTdjNWEwMzllNjRhIiwicm9sIjoidXNlcnMiLCJpZCI6NCwiZW1haWwiOiJBZ3VzdGluQGV4YW1wbGUuY29tIn0.Lt9nnSTq671Q0lYYxW1z4DWryaF5Sl0vfOmyZchaV70",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -793,6 +803,75 @@
 							"port": "5000",
 							"path": [
 								"autolibro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Agustin\",\r\n    \"apellido\": \"Perez\",\r\n    \"email\": \"Agustin@example.com\",\r\n    \"telefono\": 123454325,\r\n    \"contraseña\": \"user123\",\r\n    \"rol\": \"users\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Agustin@example.com\",\r\n    \"contraseña\": \"user123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
 							]
 						}
 					},

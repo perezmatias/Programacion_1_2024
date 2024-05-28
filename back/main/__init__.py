@@ -3,10 +3,16 @@ from dotenv import load_dotenv
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 import os
+from flask_migrate import Migrate
+from flask_jwt_extended import JWTManager
 
 api = Api()
 
 db = SQLAlchemy()
+
+migrate = Migrate()
+
+jwt = JWTManager()
 
 def create_app():
     app= Flask(__name__)
@@ -21,6 +27,7 @@ def create_app():
 #Url de configuración de base de datos
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////'+os.getenv('DATABASE_PATH')+os.getenv('DATABASE_NAME')
     db.init_app(app)
+    migrate.init_app(app,db)
 
     import main.resources as resources
     api.add_resource(resources.LibrosResources, "/libros")
@@ -39,5 +46,13 @@ def create_app():
     api.add_resource(resources.Autores_librosResources, "/autolibro")
     api.add_resource(resources.Prestamos_librosResources, "/preslibro")
     api.init_app(app)
+
+    app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
+
+    app.config['JWT_ACCESS_TOKEN_EXPIRES'] = int(os.getenv('JWT_ACCESS_TOKEN_EXPIRES'))
+    jwt.init_app(app)
+
+    from main.auth import routes
+    app.register_blueprint(routes.auth)
 
     return app
