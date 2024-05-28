@@ -2,11 +2,12 @@ from flask import request, jsonify, Blueprint
 from .. import db
 from main.models import UsuarioModel
 from flask_jwt_extended import jwt_required, get_jwt_identity, create_access_token
+from main.mail.functions import sendMail
 
-#Blueprint para acceder a los métodos de autenticación
+
 auth = Blueprint('auth', __name__, url_prefix='/auth')
 
-#Método de logueo
+
 @auth.route('/login', methods=['POST'])
 def login():
     usuario = db.session.query(UsuarioModel).filter(UsuarioModel.email == request.get_json().get("email")).first_or_404()
@@ -23,11 +24,11 @@ def login():
     else:
         return 'Incorrect password', 401
 
-#Método de registro
+
 @auth.route('/register', methods=['POST'])
 def register():
     usuario = UsuarioModel.from_json(request.get_json())
-    #Verificar si el mail ya existe en la db, scalar() para saber la cantidad de ese email
+    
     exists = db.session.query(UsuarioModel).filter(UsuarioModel.email == usuario.email).scalar() is not None
     if exists:
         return 'Duplicated mail', 409
@@ -35,6 +36,7 @@ def register():
         try:
             db.session.add(usuario)
             db.session.commit()
+            send = sendMail([usuario.email], "Bienvenido", 'register', usuario = usuario)
         except Exception as error:
             db.session.rollback()
             return str(error), 409
