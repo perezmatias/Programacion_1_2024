@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-      <meta charset="UTF-8">
-  </head>
-  <style>
-      .main{
-        border:1px solid black;
-        padding:30px;
-        background-color:white;
-        margin:10px;
-
-      }
-      body{
-        background-color: lightgray;
-      }
-      .services{
-        background-color:#94beff;
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        padding:10px;
-        border:1px solid black;
-        width:250px;
-      }
-      h1{
-        font-weight: bold;
-        font-size:25px;
-        color:#001d62;
-      }
-
-      .button {
-        background-color:#3680f2;
-      	border-radius:2px;
-      	border:1px solid black;
-      	display:inline-block;
-      	color:#ffffff;
-      	font-size:13px;
-      	padding:6px 24px;
-      	text-decoration:none;
-        margin-right:3px;
-
-      }
-
-  </style>
-  <body>
-  <br/>
-  <div class="main">
-    <h1>Bienvenido {{usuario.nombre}} {{usuario.apellido}}! </h1>
-    <p>Gracias por registrarte en nuestro sistema.</p>
-    <div class="services">
-      <p>Con nuestro servicio podras:</p>
-        <ul>
-             <li><a>Administrar tus prestamos</a></li>
-        </ul>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, sans-serif;
+        }
+        .main {
+            border: 1px solid #ccc;
+            padding: 30px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .services {
+            background-color: #e6f0ff;
+            padding: 20px;
+            border: 1px solid #d0e0ff;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h1 {
+            font-weight: bold;
+            font-size: 28px;
+            color: #003399;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .button {
+            background-color: #3680f2;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            font-size: 14px;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #2c6ec7;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Bienvenido {{usuario.nombre}} {{usuario.apellido}}!</h1>
+        <p>Gracias por registrarte en nuestro sistema. Estamos encantados de tenerte con nosotros.</p>
+        <div class="services">
+            <p>Con nuestro servicio podrás:</p>
+            <ul>
+                <li>Administrar tus préstamos</li>
+                <li>Reservar libros en línea</li>
+            </ul>
+        </div>
+        <a href="http://www.tu-plataforma.com" class="button">Ir a la plataforma</a>
     </div>
-    
-  <br/>
-</div>
-
 </body>
 </html>

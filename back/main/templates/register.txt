@@ -1,7 +1,15 @@
-Bienvenido {{usuario.nombre}} {{usuario.nombre}}!
+Bienvenido {{usuario.nombre}} {{usuario.apellido}}!
 
-Gracias por registrarte en nuestro sistema.
+Gracias por registrarte en nuestro sistema. Estamos encantados de tenerte con nosotros.
 
-Con nuestro servicio podras:
+Con nuestro servicio podrás:
 
-- Administrar tus prestamos
+- Administrar tus préstamos
+- Reservar libros en línea
+
+Accede a nuestra plataforma en el siguiente enlace: http://www.tu-plataforma.com
+
+¡Esperamos que disfrutes de todos los beneficios que ofrecemos!
+
+Saludos,
+El equipo de la Biblioteca
