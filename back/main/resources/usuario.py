@@ -16,7 +16,7 @@ class Usuario(Resource):
         else:
             return usuario.to_json()
     
-    @role_required(roles = ["admin","users"])
+    @role_required(roles = ["admin"])
     def delete(self, id):
         usuario = db.session.query(UsuarioModel).get_or_404(id)
         db.session.delete(usuario)
