@@ -7,7 +7,6 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from main.auth.decorators import role_required
 
 class Libro(Resource):
-    @role_required(roles = ["admin", "bibliotecario"])
     def get(self, id):
         libro = db.session.query(LibroModel).get_or_404(id)
         return libro.to_json_complete()
