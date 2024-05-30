@@ -17,7 +17,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNjg1NDY4OCwianRpIjoiZjJkYjAyYzItZjkwZi00NzY0LTg5YmMtODFmMzI1ZWYwZGY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NCwibmJmIjoxNzE2ODU0Njg4LCJjc3JmIjoiMmY0ZDY4Y2UtZmU2OS00OWJmLTk3M2YtOTdjNWEwMzllNjRhIiwicm9sIjoidXNlcnMiLCJpZCI6NCwiZW1haWwiOiJBZ3VzdGluQGV4YW1wbGUuY29tIn0.Lt9nnSTq671Q0lYYxW1z4DWryaF5Sl0vfOmyZchaV70",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA3Nzg1OSwianRpIjoiNjE2OGViMTctMzQyMy00NWRlLTgwYmMtYzljNDRjN2VkODk5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzE3MDc3ODU5LCJjc3JmIjoiYmI1ZjZkZjctYjVlMC00YTFmLWE4OWQtZGRmZWZiMjE4ZmQ2Iiwicm9sIjoiYWRtaW4iLCJpZCI6MywiZW1haWwiOiJtYXRpYXNAZXhhbXBsZS5jb20ifQ.5AG_b_J7GYTdk2VkK1duGS6Jbyl1H5XI_MhfOZDiCjU",
 									"type": "string"
 								}
 							]
@@ -44,6 +44,16 @@
 				{
 					"name": "Crear Usuario",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA3Nzg1OSwianRpIjoiNjE2OGViMTctMzQyMy00NWRlLTgwYmMtYzljNDRjN2VkODk5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzE3MDc3ODU5LCJjc3JmIjoiYmI1ZjZkZjctYjVlMC00YTFmLWE4OWQtZGRmZWZiMjE4ZmQ2Iiwicm9sIjoiYWRtaW4iLCJpZCI6MywiZW1haWwiOiJtYXRpYXNAZXhhbXBsZS5jb20ifQ.5AG_b_J7GYTdk2VkK1duGS6Jbyl1H5XI_MhfOZDiCjU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -80,6 +90,16 @@
 				{
 					"name": "Actualizar usuario",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA3Nzg1OSwianRpIjoiNjE2OGViMTctMzQyMy00NWRlLTgwYmMtYzljNDRjN2VkODk5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzE3MDc3ODU5LCJjc3JmIjoiYmI1ZjZkZjctYjVlMC00YTFmLWE4OWQtZGRmZWZiMjE4ZmQ2Iiwicm9sIjoiYWRtaW4iLCJpZCI6MywiZW1haWwiOiJtYXRpYXNAZXhhbXBsZS5jb20ifQ.5AG_b_J7GYTdk2VkK1duGS6Jbyl1H5XI_MhfOZDiCjU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -112,10 +132,20 @@
 				{
 					"name": "Obtener Usuario",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA3Nzg1OSwianRpIjoiNjE2OGViMTctMzQyMy00NWRlLTgwYmMtYzljNDRjN2VkODk5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzE3MDc3ODU5LCJjc3JmIjoiYmI1ZjZkZjctYjVlMC00YTFmLWE4OWQtZGRmZWZiMjE4ZmQ2Iiwicm9sIjoiYWRtaW4iLCJpZCI6MywiZW1haWwiOiJtYXRpYXNAZXhhbXBsZS5jb20ifQ.5AG_b_J7GYTdk2VkK1duGS6Jbyl1H5XI_MhfOZDiCjU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/usuario/2",
+							"raw": "http://127.0.0.1:5000/usuario/5",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -126,7 +156,7 @@
 							"port": "5000",
 							"path": [
 								"usuario",
-								"2"
+								"5"
 							]
 						}
 					},
@@ -135,10 +165,20 @@
 				{
 					"name": "Eliminar Usuario",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA3Nzg1OSwianRpIjoiNjE2OGViMTctMzQyMy00NWRlLTgwYmMtYzljNDRjN2VkODk5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzE3MDc3ODU5LCJjc3JmIjoiYmI1ZjZkZjctYjVlMC00YTFmLWE4OWQtZGRmZWZiMjE4ZmQ2Iiwicm9sIjoiYWRtaW4iLCJpZCI6MywiZW1haWwiOiJtYXRpYXNAZXhhbXBsZS5jb20ifQ.5AG_b_J7GYTdk2VkK1duGS6Jbyl1H5XI_MhfOZDiCjU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/usuario/2",
+							"raw": "http://127.0.0.1:5000/usuario/6",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -149,7 +189,7 @@
 							"port": "5000",
 							"path": [
 								"usuario",
-								"2"
+								"6"
 							]
 						}
 					},
@@ -166,7 +206,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/libros?autor_apellido=E.",
+							"raw": "http://127.0.0.1:5000/libros?autor_id=1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -180,8 +220,8 @@
 							],
 							"query": [
 								{
-									"key": "autor_apellido",
-									"value": "E."
+									"key": "autor_id",
+									"value": "1"
 								}
 							]
 						}
@@ -191,11 +231,21 @@
 				{
 					"name": "Crear Libro",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Calculo 1\",\r\n    \"genero\": \"Ciencias basicas\",\r\n    \"autor\": \"Carlos Bodoque\",\r\n    \"cant_ejemplares\": \"10\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Matrices\",\r\n    \"genero\": \"Matematica\",\r\n    \"cant_ejemplares\": \"3\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -250,6 +300,16 @@
 				{
 					"name": "Actualizar Libro",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -282,6 +342,16 @@
 				{
 					"name": "Eliminar Libro",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -382,10 +452,20 @@
 				{
 					"name": "Listado Prestamos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/prestamos?apellido=pascal",
+							"raw": "http://127.0.0.1:5000/prestamos",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -396,12 +476,6 @@
 							"port": "5000",
 							"path": [
 								"prestamos"
-							],
-							"query": [
-								{
-									"key": "apellido",
-									"value": "pascal"
-								}
 							]
 						}
 					},
@@ -410,11 +484,21 @@
 				{
 					"name": "Generar Prestamo",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_usuario\": 2,\r\n    \"Fecha_retiro\": \"10-04-2024\",\r\n    \"Fecha_devolucion\": \"12-04-2024\",\r\n    \"libros\": []\r\n}",
+							"raw": "{\r\n    \"id_usuario\": 2,\r\n    \"Fecha_retiro\": \"10-06-2023\",\r\n    \"Fecha_devolucion\": \"20-06-2023\",\r\n    \"libros\": [1]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -446,6 +530,16 @@
 				{
 					"name": "Traer Prestamo",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -469,6 +563,16 @@
 				{
 					"name": "Actualizar Prestamo",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -501,6 +605,16 @@
 				{
 					"name": "Eliminar Prestamo",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -632,11 +746,21 @@
 				{
 					"name": "Agregar Valoracion",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4Njk3MSwianRpIjoiOTBhNDMwNmQtMzU5NC00ZGEyLWFhZDktMDNmODlhY2ZhY2I0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NCwibmJmIjoxNzE3MDg2OTcxLCJjc3JmIjoiMzM5Zjk1MWYtZmEzOS00YTU0LWI2MDAtNDJhNDRiNjFhMDFiIiwicm9sIjoidXNlcnMiLCJpZCI6NCwiZW1haWwiOiJBZ3VzdGluQGV4YW1wbGUuY29tIn0.5VSRksRoDJW-DHDc5zOnIKcwl_Ux1Q3f8QhOA6Szri8",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"id_libro\": 2,\r\n    \"valoracion\": 9,\r\n    \"comentario\": \"Lo recomiendo.\"\r\n}\r\n",
+							"raw": "{\r\n    \"id_usuario\": 4,\r\n    \"id_libro\": 2,\r\n    \"valoracion\": 6,\r\n    \"comentario\": \"Intersante.\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -671,7 +795,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/autores",
+							"raw": "http://127.0.0.1:5000/autores?apellido=A.",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -682,6 +806,12 @@
 							"port": "5000",
 							"path": [
 								"autores"
+							],
+							"query": [
+								{
+									"key": "apellido",
+									"value": "A."
+								}
 							]
 						}
 					},
@@ -713,11 +843,21 @@
 				{
 					"name": "Agregar Autor",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNzA4NzMyMSwianRpIjoiNmY3YjY1M2YtNzQ2NS00ZTliLTgwNjYtN2YwZjZiN2VjZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNzE3MDg3MzIxLCJjc3JmIjoiYzUyYzNiZDMtMWZiYy00ODE0LTg2YTMtZmFhZWZlZmU2MGVhIiwicm9sIjoiYmlibGlvdGVjYXJpbyIsImlkIjo3LCJlbWFpbCI6Im1hbm9sb0BleGFtcGxlLmNvbSJ9.EcVzj5nIBZPtENh3tMYVrOgLKXj3qQvvOdQMhTi7D2s",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Albert\",\r\n    \"apellido\": \"E.\",\r\n    \"libros\": []\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Carlos D.\",\r\n    \"apellido\": \"A.\",\r\n    \"libros\": [1]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -820,7 +960,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Agustin\",\r\n    \"apellido\": \"Perez\",\r\n    \"email\": \"Agustin@example.com\",\r\n    \"telefono\": 123454325,\r\n    \"contraseña\": \"user123\",\r\n    \"rol\": \"users\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Manolo\",\r\n    \"apellido\": \"D.\",\r\n    \"email\": \"manolo@example.com\",\r\n    \"telefono\": 123454325,\r\n    \"contraseña\": \"bibliotecario1\",\r\n    \"rol\": \"bibliotecario\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -852,7 +992,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"Agustin@example.com\",\r\n    \"contraseña\": \"user123\"\r\n}",
+							"raw": "{\r\n    \"email\": \"manolo@example.com\",\r\n    \"contraseña\": \"bibliotecario1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

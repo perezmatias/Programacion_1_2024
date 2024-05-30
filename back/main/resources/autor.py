@@ -3,6 +3,8 @@ from flask import request, jsonify
 from .. import db
 from main.models import AutorModel
 from sqlalchemy import func, desc
+from flask_jwt_extended import jwt_required, get_jwt_identity
+from main.auth.decorators import role_required
 
 
 class Autor(Resource):
@@ -39,6 +41,7 @@ class Autores(Resource):
                         'page': page
                     })
     
+    @role_required(roles = ["admin", "bibliotecario"])
     def post(self):
         autor = AutorModel.from_json(request.get_json())
         db.session.add(autor)

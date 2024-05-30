@@ -4,19 +4,24 @@ from .. import db
 from main.models import PrestamoModel, UsuarioModel
 from datetime import datetime
 from sqlalchemy import func, desc
+from flask_jwt_extended import jwt_required, get_jwt_identity
+from main.auth.decorators import role_required
 
 
 class Prestamo(Resource):
+    @role_required(roles = ["admin", "bibliotecario"])
     def get(self, id):
         prestamo = db.session.query(PrestamoModel).get_or_404(id)
         return prestamo.to_json()
     
+    @role_required(roles = ["admin", "bibliotecario"])
     def delete(self, id):
         prestamo = db.session.query(PrestamoModel).get_or_404(id)
         db.session.delete(prestamo)
         db.session.commit()
         return prestamo.to_json(), 204
     
+    @role_required(roles = ["admin", "bibliotecario"])
     def put(self, id):
         prestamo = db.session.query(PrestamoModel).get_or_404(id)
         data = request.get_json()
@@ -29,6 +34,7 @@ class Prestamo(Resource):
         return prestamo.to_json() , 201
 
 class Prestamos(Resource):
+    @role_required(roles = ["admin", "bibliotecario"])
     def get(self):
         page = 1
         per_page = 10
@@ -95,6 +101,7 @@ class Prestamos(Resource):
                         'page': page
                     })
 
+    @role_required(roles = ["admin", "bibliotecario"])
     def post(self):
         prestamo = PrestamoModel.from_json(request.get_json())
         db.session.add(prestamo)
