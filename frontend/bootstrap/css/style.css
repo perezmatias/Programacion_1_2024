@@ -1,36 +1,191 @@
+/* Estilos generales */
 body {
-    background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-.card {
-    border: none;
-    border-radius: 10px;
+/* Contenedor principal */
+.d-flex {
+    display: flex;
+}
+
+#page-content-wrapper {
+    width: 100%;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
 }
 
-.card-body h4, .card-body h5 {
-    color: #000;
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #4e4376; /* Color púrpura suave */
+    min-height: 100vh;
+    position: fixed;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #322f56;
+    border-radius: 4px;
+}
+
+/* Encabezado */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Formularios */
+.form-group label {
+    font-weight: bold;
+    color: #333;
 }
 
 .form-control {
-    border-radius: 15px;
-    background-color: #e6e6e6;
-    border: none;
+    border-radius: 20px;
+    background-color: #e7e7e7;
+    border: 1px solid #cccccc;
+    box-shadow: none;
 }
 
-.btn-light {
-    background-color: #dcdcdc;
-    border-radius: 15px;
-    color: #fff;
-    border: none;
+.form-control::placeholder {
+    color: #b0b0b0;
 }
 
-a {
-    color: #6a0dad;
+button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #98c37b; /* Verde claro */
+    border-color: #98c37b;
+}
+
+.btn-info {
+    background-color: #5b8bdf;
+    border-color: #5b8bdf;
+}
+
+.btn-danger {
+    background-color: #e57373;
+    border-color: #e57373;
+}
+
+/* Botones en la vista de lista */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de acción */
+.list-group-item a {
     text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Enlaces */
+a {
+    color: #5b8bdf;
+    font-weight: bold;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #322f56;
+    text-decoration: none;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Input para búsqueda */
+.form-control.mr-sm-2 {
+    border-radius: 20px;
+    border: 1px solid #dddddd;
+    background-color: #f7f7f7;
+}
+
+/* Ajuste para las tarjetas de usuario */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Estilo de botones en formularios */
+button[type="submit"] {
+    background-color: #98c37b;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+}
+
+button[type="button"] {
+    background-color: #e57373;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Ajustes específicos de la vista del dashboard */
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Efectos */
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+    #page-content-wrapper {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
 }

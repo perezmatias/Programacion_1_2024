@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Préstamo - Biblioteca Admin</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <?php include('sidebar.html'); ?>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Crear Préstamo</h1>
+            </nav>
+            <div class="container mt-4">
+                <form>
+                    <div class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Ingrese el nombre del usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="libro">Libro</label>
+                        <input type="text" class="form-control" id="libro" placeholder="Ingrese el título del libro">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha de Préstamo</label>
+                        <input type="date" class="form-control" id="fecha">
+                    </div>
+                    <button type="submit" class="btn btn-success">Crear</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

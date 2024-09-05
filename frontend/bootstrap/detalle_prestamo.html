@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Préstamo - Biblioteca Admin</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <?php include('sidebar.html'); ?>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Detalle del Préstamo</h1>
+            </nav>
+            <div class="container mt-4">
+                <form>
+                    <div class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" value="Jordan Belfort" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="libro">Libro</label>
+                        <input type="text" class="form-control" id="libro" value="Libro 1" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha de Préstamo</label>
+                        <input type="date" class="form-control" id="fecha" value="2024-09-01">
+                    </div>
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros - Biblioteca Admin</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <?php include('sidebar.html'); ?>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Libros</h1>
+                <input class="form-control mr-sm-2 w-25" type="search" placeholder="Buscar libro" aria-label="Search">
+            </nav>
+            <div class="container mt-4">
+                <!-- Books list example -->
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Libro 1
+                        <a href="detalle_libro.html" class="btn btn-info btn-sm">Ver Detalle</a>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Libro 2
+                        <a href="detalle_libro.html" class="btn btn-info btn-sm">Ver Detalle</a>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Libro 3
+                        <a href="detalle_libro.html" class="btn btn-info btn-sm">Ver Detalle</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

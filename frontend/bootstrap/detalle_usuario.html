@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Usuario - Biblioteca Admin</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <?php include('sidebar.html'); ?>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Usuario</h1>
+            </nav>
+            <div class="container mt-4">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" value="Jordan Belfort" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI</label>
+                        <input type="text" class="form-control" id="dni" value="12345678">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono" value="987654321">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" value="jordan@biblioteca.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="rol">Rol</label>
+                        <input type="text" class="form-control" id="rol" value="Usuario" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
