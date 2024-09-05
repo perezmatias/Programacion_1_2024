@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros - Biblioteca Usuario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <?php include('sidebar_usuario.html'); ?>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Libros</h1>
+            </nav>
+            <div class="container mt-4">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                    </div>
+                </div>
+                <div class="card-columns">
+                    <!-- Ejemplo de libro -->
+                    <div class="card">
+                        <img src="img/libro-ejemplo.jpg" class="card-img-top" alt="Libro Ejemplo">
+                        <div class="card-body">
+                            <h5 class="card-title">Título del Libro</h5>
+                            <p class="card-text">Autor: Nombre Autor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

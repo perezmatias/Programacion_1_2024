@@ -1,191 +1,204 @@
-/* Estilos generales */
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-/* Contenedor principal */
-.d-flex {
-    display: flex;
+h1, h5 {
+    color: #333;
+    font-weight: bold;
 }
 
-#page-content-wrapper {
-    width: 100%;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 20px;
+.container {
+    margin-top: 20px;
+}
+
+.navbar {
+    padding: 15px;
+    background-color: #f8f9fa;
 }
 
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: #4e4376; /* Color púrpura suave */
-    min-height: 100vh;
+    background-color: #eee;
+    height: 100vh;
     position: fixed;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
 }
 
 .sidebar a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
     display: block;
-    font-size: 16px;
+    padding: 10px;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .sidebar a:hover {
-    background-color: #322f56;
-    border-radius: 4px;
-}
-
-/* Encabezado */
-.navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
-    margin-bottom: 20px;
-}
-
-.navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
+    background-color: #ddd;
     color: #333;
 }
 
-/* Formularios */
-.form-group label {
-    font-weight: bold;
+.sidebar img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sidebar .list-group-item {
+    border: none;
+    padding: 10px 0;
+    background: transparent;
     color: #333;
 }
 
+.sidebar .list-group-item:hover {
+    background: #ddd;
+}
+
+/* Input Fields */
 .form-control {
-    border-radius: 20px;
-    background-color: #e7e7e7;
-    border: 1px solid #cccccc;
-    box-shadow: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-.form-control::placeholder {
-    color: #b0b0b0;
+.input-group .form-control {
+    border-radius: 8px 0 0 8px;
 }
 
-button {
+.input-group-append .btn {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Buttons */
+.btn {
     border-radius: 20px;
     padding: 10px 20px;
-    font-size: 16px;
     font-weight: bold;
 }
 
-.btn-success {
-    background-color: #98c37b; /* Verde claro */
-    border-color: #98c37b;
+.btn-primary {
+    background-color: #5b5f97;
+    border: none;
 }
 
-.btn-info {
-    background-color: #5b8bdf;
-    border-color: #5b8bdf;
+.btn-primary:hover {
+    background-color: #4a4d85;
 }
 
 .btn-danger {
-    background-color: #e57373;
-    border-color: #e57373;
-}
-
-/* Botones en la vista de lista */
-.list-group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #d9534f;
     border: none;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Botones de acción */
-.list-group-item a {
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: white;
+.btn-danger:hover {
+    background-color: #c9302c;
 }
 
-/* Enlaces */
-a {
-    color: #5b8bdf;
-    font-weight: bold;
+.btn-success {
+    background-color: #5cb85c;
+    border: none;
 }
 
-a:hover {
-    color: #322f56;
-    text-decoration: none;
+.btn-success:hover {
+    background-color: #4cae4c;
 }
 
-/* Imágenes */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 20px;
+/* Card and List Styles */
+.card-columns {
+    column-count: 2;
 }
 
-/* Input para búsqueda */
-.form-control.mr-sm-2 {
-    border-radius: 20px;
-    border: 1px solid #dddddd;
-    background-color: #f7f7f7;
-}
-
-/* Ajuste para las tarjetas de usuario */
 .card {
     border: none;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
 
-.card-body {
-    padding: 20px;
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-/* Estilo de botones en formularios */
-button[type="submit"] {
-    background-color: #98c37b;
-    color: #fff;
+.list-group-item {
     border: none;
-    margin-top: 10px;
-}
-
-button[type="button"] {
-    background-color: #e57373;
-    color: #fff;
-    border: none;
-    margin-top: 10px;
-}
-
-/* Ajustes específicos de la vista del dashboard */
-.dashboard-card {
-    background-color: #ffffff;
+    margin-bottom: 10px;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
-/* Efectos */
 .shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Adaptabilidad */
-@media (max-width: 768px) {
-    #page-content-wrapper {
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
+/* Profile Picture */
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Notification Styles */
+.notification {
+    background-color: #fffbcc;
+    padding: 10px;
+    border: 1px solid #ffeeaa;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* General Form Styles */
+form label {
+    font-weight: bold;
+    color: #555;
+}
+
+textarea {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Login/Register Styles */
+.login-card, .register-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.login-card h2, .register-card h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.login-card input, .register-card input {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #eee;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

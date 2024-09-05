@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Libro - Biblioteca Usuario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <?php include('sidebar_usuario.html'); ?>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Detalles del Libro</h1>
+            </nav>
+            <div class="container mt-4">
+                <div class="card">
+                    <img src="img/libro-ejemplo.jpg" class="card-img-top" alt="Libro Ejemplo">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Libro</h5>
+                        <p class="card-text">Autor: Nombre Autor</p>
+                        <p class="card-text">Estrellas: ★★★★☆</p>
+                        <p class="card-text">Comentarios:</p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu comentario..."></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary">Publicar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

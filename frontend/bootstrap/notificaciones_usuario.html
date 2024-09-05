@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones - Biblioteca Usuario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <?php include('sidebar_usuario.html'); ?>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Notificaciones</h1>
+            </nav>
+            <div class="container mt-4">
+                <div class="list-group">
+                    <!-- Ejemplo de notificaciones -->
+                    <div class="list-group-item shadow">
+                        Préstamo del día 10/03 (vencido)
+                    </div>
+                    <div class="list-group-item shadow">
+                        Préstamo del día 20/04 (próximo a vencer)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
