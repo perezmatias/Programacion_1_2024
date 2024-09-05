@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Modificar Usuario - Bibliotecario</title>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Sidebar aquí igual que antes -->
+    </div>
+
+    <div class="container">
+        <h1>Modificar Usuario</h1>
+        <form>
+            <label for="fullName">Nombre Completo</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Nombre Completo">
+            
+            <label for="dni">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder="DNI">
+            
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
+            
+            <label for="phone">Teléfono</label>
+            <input type="text" class="form-control" id="phone" placeholder="Número de Teléfono">
+            
+            <label for="status">Estado</label>
+            <select class="form-control" id="status">
+                <option>Activo</option>
+                <option>Desactivado</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+</body>
+</html>
