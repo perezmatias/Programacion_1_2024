@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notificaciones - Biblioteca Usuario</title>
+    <title>Libros - Usuario</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="d-flex">
         <!-- Sidebar -->
-        <?php include('sidebar_usuario.html'); ?>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/profile.png" class="profile-pic" alt="Bibliotecario">
+                <h5>Hola, Usuario</h5>
+            </div>
+            <ul class="list-group">
+                <a href="inicio_usuario.html" class="list-group-item">Inicio</a>
+                <a href="libros_usuario.html" class="list-group-item">Libros</a>
+                <a href="notificaciones _usuario.html" class="list-group-item">Notificaciones</a>
+                <a href="configuracion_usuario.html" class="list-group-item">Configuración</a>
+            </ul>
+        </div>
 
         <!-- Page Content -->
         <div id="page-content-wrapper" class="w-100">
@@ -32,3 +43,4 @@
     </div>
 </body>
 </html>
+

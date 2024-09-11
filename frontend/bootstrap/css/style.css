@@ -22,10 +22,10 @@ h1, h5 {
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
+    width: 250px; /* Define el ancho fijo del sidebar */
     background-color: #eee;
     height: 100vh;
-    position: fixed;
+    position: fixed; /* Fija el sidebar en la posición */
     padding: 15px;
     overflow-y: auto;
 }
@@ -64,6 +64,12 @@ h1, h5 {
 
 .sidebar .list-group-item:hover {
     background: #ddd;
+}
+
+/* Page Content */
+#page-content-wrapper {
+    margin-left: 250px; /* Ajusta el margen izquierdo al ancho del sidebar */
+    padding: 20px; /* Añade un padding para separar el contenido del borde */
 }
 
 /* Input Fields */

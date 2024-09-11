@@ -10,7 +10,19 @@
 <body>
     <div class="d-flex">
         <!-- Sidebar -->
-        <?php include('sidebar.html'); ?>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/profile.png" class="profile-pic" alt="Bibliotecario">
+                <h5>Hola, Administrador</h5>
+            </div>
+            <ul class="list-group">
+                <a href="dashboard.html" class="list-group-item">Inicio</a>
+                <a href="usuarios.html" class="list-group-item">Usuarios</a>
+                <a href="libros.html" class="list-group-item">Libros</a>
+                <a href="prestamos.html" class="list-group-item">Préstamos</a>
+                <a href="configuracion_admin.html" class="list-group-item">Configuración</a>
+            </ul>
+        </div>
 
         <!-- Page Content -->
         <div id="page-content-wrapper" class="w-100">
@@ -35,6 +47,7 @@
                     </li>
                 </ul>
             </div>
+            <a href="detalle_libro.html" class="btn btn-block btn-light">Crear</a>
         </div>
     </div>
 </body>

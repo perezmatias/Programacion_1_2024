@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuración - Biblioteca Usuario</title>
+    <title>Configuración - Usuario</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="d-flex">
         <!-- Sidebar -->
-        <?php include('sidebar_usuario.html'); ?>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/profile.png" class="profile-pic" alt="Bibliotecario">
+                <h5>Hola, Usuario</h5>
+            </div>
+            <ul class="list-group">
+                <a href="inicio_usuario.html" class="list-group-item">Inicio</a>
+                <a href="libros_usuario.html" class="list-group-item">Libros</a>
+                <a href="notificaciones _usuario.html" class="list-group-item">Notificaciones</a>
+                <a href="configuracion_usuario.html" class="list-group-item">Configuración</a>
+            </ul>
+        </div>
 
         <!-- Page Content -->
         <div id="page-content-wrapper" class="w-100">
@@ -28,11 +39,23 @@
                         <input type="email" class="form-control" id="email" placeholder="Ingrese su correo">
                     </div>
                     <div class="form-group">
-                        <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                        <label for="password">Contraseña Actual</label>
+                        <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña actual">
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordn">Contraseña Nueva</label>
+                        <input type="passwordn" class="form-control" id="passwordn" placeholder="Ingrese su contraseña nueva">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" class="form-control" id="telefono" placeholder="Ingrese su Telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI</label>
+                        <input type="text" class="form-control" id="dni" placeholder="Ingrese su DNI">
                     </div>
                     <button type="submit" class="btn btn-success">Guardar</button>
-                    <button type="button" class="btn btn-danger">Cerrar Sesión</button>
+                    <a href="login.html" type="button" class="btn btn-danger">Cerrar Sesión</a>
                 </form>
             </div>
         </div>

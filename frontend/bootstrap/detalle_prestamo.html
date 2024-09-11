@@ -10,7 +10,19 @@
 <body>
     <div class="d-flex">
         <!-- Sidebar -->
-        <?php include('sidebar.html'); ?>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/profile.png" class="profile-pic" alt="Bibliotecario">
+                <h5>Hola, Administrador</h5>
+            </div>
+            <ul class="list-group">
+                <a href="dashboard.html" class="list-group-item">Inicio</a>
+                <a href="usuarios.html" class="list-group-item">Usuarios</a>
+                <a href="libros.html" class="list-group-item">Libros</a>
+                <a href="prestamos.html" class="list-group-item">Préstamos</a>
+                <a href="configuracion_admin.html" class="list-group-item">Configuración</a>
+            </ul>
+        </div>
 
         <!-- Page Content -->
         <div id="page-content-wrapper" class="w-100">
@@ -30,6 +42,26 @@
                     <div class="form-group">
                         <label for="fecha">Fecha de Préstamo</label>
                         <input type="date" class="form-control" id="fecha" value="2024-09-01">
+                    </div>
+                    <div class="form-group">
+                        <label for="autor">Autor</label>
+                        <input type="text" class="form-control" id="autor" value="Richard Wolfson" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI</label>
+                        <input type="text" class="form-control" id="dni" value="12386599" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="fechad">Fecha de Devolucion</label>
+                        <input type="date" class="form-control" id="fechad" value="2024-09-10">
+                    </div>
+                    <div class="form-group"></div>
+                        <label for="id">ID</label>
+                        <input type="text" class="form-control" id="id" value="12389" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea class="form-control" id="descripcion">Libro en perfectas condiciones..</textarea>
                     </div>
                     <button type="submit" class="btn btn-success">Guardar</button>
                     <button type="button" class="btn btn-danger">Eliminar</button>

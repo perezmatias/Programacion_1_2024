@@ -3,37 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
-    <title>Modificar Usuario - Bibliotecario</title>
+    <title>Detalle de Usuario - Bibliotecario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <!-- Sidebar aquí igual que antes -->
-    </div>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/profile.png" class="profile-pic" alt="Bibliotecario">
+                <h5>Hola, Bibliotecario</h5>
+            </div>
+            <ul class="list-group">
+                <a href="bibliotecario_inicio.html" class="list-group-item">Inicio</a>
+                <a href="bibliotecario_usuarios.html" class="list-group-item">Usuarios</a>
+                <a href="bibliotecario_libros.html" class="list-group-item">Libros</a>
+                <a href="bibliotecario_prestamos.html" class="list-group-item">Préstamos</a>
+                <a href="configuracion_bibliotecario.html" class="list-group-item">Configuración</a>
+            </ul>
+        </div>
 
-    <div class="container">
-        <h1>Modificar Usuario</h1>
-        <form>
-            <label for="fullName">Nombre Completo</label>
-            <input type="text" class="form-control" id="fullName" placeholder="Nombre Completo">
-            
-            <label for="dni">DNI</label>
-            <input type="text" class="form-control" id="dni" placeholder="DNI">
-            
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
-            
-            <label for="phone">Teléfono</label>
-            <input type="text" class="form-control" id="phone" placeholder="Número de Teléfono">
-            
-            <label for="status">Estado</label>
-            <select class="form-control" id="status">
-                <option>Activo</option>
-                <option>Desactivado</option>
-            </select>
-
-            <button type="submit" class="btn btn-primary">Guardar</button>
-        </form>
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Usuario</h1>
+            </nav>
+            <div class="container mt-4">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" value="Jordan Belfort" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI</label>
+                        <input type="text" class="form-control" id="dni" value="12345678">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono" value="987654321">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" value="jordan@biblioteca.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input type="text" class="form-control" id="estado" value="Autorizado" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>

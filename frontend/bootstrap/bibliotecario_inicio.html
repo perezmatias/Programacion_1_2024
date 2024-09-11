@@ -3,39 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
     <title>Inicio - Bibliotecario</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <img src="img/profile.png" class="profile-pic" alt="Bibliotecario">
-            <h5>Hola, Bibliotecario</h5>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/profile.png" class="profile-pic" alt="Bibliotecario">
+                <h5>Hola, Bibliotecario</h5>
+            </div>
+            <ul class="list-group">
+                <a href="bibliotecario_inicio.html" class="list-group-item">Inicio</a>
+                <a href="bibliotecario_usuarios.html" class="list-group-item">Usuarios</a>
+                <a href="bibliotecario_libros.html" class="list-group-item">Libros</a>
+                <a href="bibliotecario_prestamos.html" class="list-group-item">Préstamos</a>
+                <a href="configuracion_bibliotecario.html" class="list-group-item">Configuración</a>
+            </ul>
         </div>
-        <ul class="list-group">
-            <a href="#" class="list-group-item">Usuarios</a>
-            <a href="#" class="list-group-item">Libros</a>
-            <a href="#" class="list-group-item">Préstamos</a>
-            <a href="#" class="list-group-item">Configuración</a>
-        </ul>
+        
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <div class="container-fluid">
+                <h1 class="mt-4">Dashboard</h1>
+                <p>Welcome! Here's an overview of the library's current status:</p>
+                <!-- Example content -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Usuarios</h5>
+                                <p class="card-text">15</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Libros</h5>
+                                <p class="card-text">120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Préstamos Activos</h5>
+                                <p class="card-text">8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <h1>Panel de Control</h1>
-        <div class="dashboard-cards">
-            <div class="card">
-                <h5>Total de Préstamos</h5>
-                <p>123</p>
-            </div>
-            <div class="card">
-                <h5>Usuarios Activos</h5>
-                <p>456</p>
-            </div>
-            <div class="card">
-                <h5>Libros Disponibles</h5>
-                <p>789</p>
-            </div>
-        </div>
-    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

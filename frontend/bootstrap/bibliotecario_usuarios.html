@@ -3,23 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
     <title>Usuarios - Bibliotecario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <!-- Sidebar aquí igual que antes -->
-    </div>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/profile.png" class="profile-pic" alt="Bibliotecario">
+                <h5>Hola, Bibliotecario</h5>
+            </div>
+            <ul class="list-group">
+                <a href="bibliotecario_inicio.html" class="list-group-item">Inicio</a>
+                <a href="bibliotecario_usuarios.html" class="list-group-item">Usuarios</a>
+                <a href="bibliotecario_libros.html" class="list-group-item">Libros</a>
+                <a href="bibliotecario_prestamos.html" class="list-group-item">Préstamos</a>
+                <a href="configuracion_bibliotecario.html" class="list-group-item">Configuración</a>
+            </ul>
+        </div>
 
-    <div class="container">
-        <h1>Usuarios</h1>
-        <input type="text" class="form-control" placeholder="Buscar usuario...">
-        <ul class="list-group">
-            <!-- Lista de usuarios ejemplo -->
-            <li class="list-group-item">Usuario 1</li>
-            <li class="list-group-item">Usuario 2</li>
-            <li class="list-group-item">Usuario 3</li>
-        </ul>
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <h1 class="navbar-brand">Usuarios</h1>
+                <input class="form-control mr-sm-2 w-25" type="search" placeholder="Buscar usuario" aria-label="Search">
+            </nav>
+            <div class="container mt-4">
+                <!-- Users list example -->
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Jordan Belfort
+                        <a href="bibliotecario_modificar_usuario.html" class="btn btn-info btn-sm">Ver Detalle</a>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Michael Leones
+                        <a href="bibliotecario_modificar_usuario.html" class="btn btn-info btn-sm">Ver Detalle</a>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        David Syor
+                        <a href="bibliotecario_modificar_usuario.html" class="btn btn-info btn-sm">Ver Detalle</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
