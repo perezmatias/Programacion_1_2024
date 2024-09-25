@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<!-- Page Content -->
+<div id="page-content-wrapper" class="w-100">
+    <nav class="navbar navbar-light bg-light border-bottom">
+        <h1 class="navbar-brand">Configuración</h1>
+    </nav>
+    <div class="container mt-4">
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña Actual</label>
+                <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña actual">
+            </div>
+            <div class="form-group">
+                <label for="passwordn">Contraseña Nueva</label>
+                <input type="passwordn" class="form-control" id="passwordn" placeholder="Ingrese su contraseña nueva">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Telefono</label>
+                <input type="text" class="form-control" id="telefono" placeholder="Ingrese su Telefono">
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input type="text" class="form-control" id="dni" placeholder="Ingrese su DNI">
+            </div>
+            <div class="form-group">
+                <label for="rol">Rol</label>
+                <input type="text" class="form-control" id="rol" value="Rol" readonly>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" class="form-control" id="estado" value="Estado" readonly>
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+            <a RouterLink="login" href="login" type="button" class="btn btn-danger">Cerrar Sesión</a>
+        </form>
+    </div>
+</div>

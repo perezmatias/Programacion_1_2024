@@ -1,0 +1,32 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { LibrosComponent } from './pages/libros/libros.component';
+import { EditlibrosComponent } from './pages/editlibros/editlibros.component';
+import { PrestamosComponent } from './pages/prestamos/prestamos.component';
+import { EditprestamosComponent } from './pages/editprestamos/editprestamos.component';
+
+const routes: Routes = [
+
+  { path:'login', component:LoginComponent },
+  { path:'register', component:RegisterComponent},
+  { path:'admin', component:AdminComponent},
+  { path:'configuracion', component:ConfiguracionComponent},
+  { path:'usuarios', component:UsuariosComponent},
+  { path:'libros', component:LibrosComponent},
+  { path:'editlibros', component:EditlibrosComponent},
+  { path:'prestamos', component:PrestamosComponent},
+  { path:'editprestamos', component:EditprestamosComponent},
+
+  { path: '', redirectTo: '/login', pathMatch:'full'}
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
