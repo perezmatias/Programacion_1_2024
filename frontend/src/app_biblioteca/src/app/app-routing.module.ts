@@ -9,6 +9,9 @@ import { LibrosComponent } from './pages/libros/libros.component';
 import { EditlibrosComponent } from './pages/editlibros/editlibros.component';
 import { PrestamosComponent } from './pages/prestamos/prestamos.component';
 import { EditprestamosComponent } from './pages/editprestamos/editprestamos.component';
+import { LibrosuserComponent } from './pages/librosuser/librosuser.component';
+import { NotificacionesComponent } from './pages/notificaciones/notificaciones.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 
 const routes: Routes = [
 
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path:'editlibros', component:EditlibrosComponent},
   { path:'prestamos', component:PrestamosComponent},
   { path:'editprestamos', component:EditprestamosComponent},
+  { path:'usuario', component:UsuarioComponent},
+  { path:'librosuser', component:LibrosuserComponent},
+  { path:'notificaciones', component:NotificacionesComponent},
 
   { path: '', redirectTo: '/login', pathMatch:'full'}
 ];

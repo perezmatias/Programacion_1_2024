@@ -14,6 +14,9 @@ import { LibrosComponent } from './pages/libros/libros.component';
 import { EditlibrosComponent } from './pages/editlibros/editlibros.component';
 import { PrestamosComponent } from './pages/prestamos/prestamos.component';
 import { EditprestamosComponent } from './pages/editprestamos/editprestamos.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { LibrosuserComponent } from './pages/librosuser/librosuser.component';
+import { NotificacionesComponent } from './pages/notificaciones/notificaciones.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { EditprestamosComponent } from './pages/editprestamos/editprestamos.comp
     EditlibrosComponent,
     PrestamosComponent,
     EditprestamosComponent,
+    UsuarioComponent,
+    LibrosuserComponent,
+    NotificacionesComponent,
   ],
   imports: [
     BrowserModule,
