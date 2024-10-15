@@ -12,17 +12,17 @@ import { EditprestamosComponent } from './pages/editprestamos/editprestamos.comp
 import { LibrosuserComponent } from './pages/librosuser/librosuser.component';
 import { NotificacionesComponent } from './pages/notificaciones/notificaciones.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
-
+import { authsessionGuard } from './guards/authsession.guard';
 const routes: Routes = [
 
   { path:'login', component:LoginComponent },
   { path:'register', component:RegisterComponent},
   { path:'admin', component:AdminComponent},
-  { path:'configuracion', component:ConfiguracionComponent},
-  { path:'usuarios', component:UsuariosComponent},
-  { path:'libros', component:LibrosComponent},
+  { path:'configuracion', component:ConfiguracionComponent, canActivate:[authsessionGuard]},
+  { path:'usuarios', component:UsuariosComponent, canActivate:[authsessionGuard]},
+  { path:'libros', component:LibrosComponent, canActivate:[authsessionGuard]},
   { path:'editlibros', component:EditlibrosComponent},
-  { path:'prestamos', component:PrestamosComponent},
+  { path:'prestamos', component:PrestamosComponent, canActivate:[authsessionGuard]},
   { path:'editprestamos', component:EditprestamosComponent},
   { path:'usuario', component:UsuarioComponent},
   { path:'librosuser', component:LibrosuserComponent},

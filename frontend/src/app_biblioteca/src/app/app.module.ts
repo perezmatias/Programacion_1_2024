@@ -17,6 +17,8 @@ import { EditprestamosComponent } from './pages/editprestamos/editprestamos.comp
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { LibrosuserComponent } from './pages/librosuser/librosuser.component';
 import { NotificacionesComponent } from './pages/notificaciones/notificaciones.component';
+import { HttpClient, HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { NotificacionesComponent } from './pages/notificaciones/notificaciones.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
