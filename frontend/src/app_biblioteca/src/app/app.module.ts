@@ -18,7 +18,12 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { LibrosuserComponent } from './pages/librosuser/librosuser.component';
 import { NotificacionesComponent } from './pages/notificaciones/notificaciones.component';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ListUsersComponent } from './components/list-users/list-users.component';
+import { AbmComponent } from './components/abm/abm.component';
+import { ListBooksComponent } from './components/list-books/list-books.component';
+import { ListLoansComponent } from './components/list-loans/list-loans.component';
+import { EditusersComponent } from './pages/editusers/editusers.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +42,18 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms'
     UsuarioComponent,
     LibrosuserComponent,
     NotificacionesComponent,
+    ListUsersComponent,
+    AbmComponent,
+    ListBooksComponent,
+    ListLoansComponent,
+    EditusersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

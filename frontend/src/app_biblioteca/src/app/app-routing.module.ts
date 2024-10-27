@@ -13,6 +13,7 @@ import { LibrosuserComponent } from './pages/librosuser/librosuser.component';
 import { NotificacionesComponent } from './pages/notificaciones/notificaciones.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { authsessionGuard } from './guards/authsession.guard';
+import { EditusersComponent } from './pages/editusers/editusers.component';
 const routes: Routes = [
 
   { path:'login', component:LoginComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path:'usuario', component:UsuarioComponent},
   { path:'librosuser', component:LibrosuserComponent},
   { path:'notificaciones', component:NotificacionesComponent},
+  { path:'editusers/:id/:tipo_op', component:EditusersComponent},
 
   { path: '', redirectTo: '/login', pathMatch:'full'}
 ];
