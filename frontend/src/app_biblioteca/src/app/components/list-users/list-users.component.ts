@@ -31,12 +31,12 @@ export class ListUsersComponent {
     private router: Router
   ){
   } 
-  editarusuario(user:any) {
+  editarusuario(user: any) {
     console.log('Estoy editando', user);
-    this.router.navigate(['/editusers/'+user.id+'/Editar']);
+    this.router.navigate(['/editusers/' + user.id + '/Editar']);
   }
-  buscar() {
-    console.log('buscar: ', this.searchQuery);
-    this.filteredUsers = this.arrayUsuarios.filter(user => user.nombre.includes(this.searchQuery));
+
+  buscar(query: string) {
+    this.filteredUsers = this.arrayUsuarios.filter(user => user.nombre.toLowerCase().includes(query.toLowerCase()));
   }
 }

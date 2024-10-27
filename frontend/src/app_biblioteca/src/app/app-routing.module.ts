@@ -22,7 +22,7 @@ const routes: Routes = [
   { path:'configuracion', component:ConfiguracionComponent, canActivate:[authsessionGuard]},
   { path:'usuarios', component:UsuariosComponent, canActivate:[authsessionGuard]},
   { path:'libros', component:LibrosComponent, canActivate:[authsessionGuard]},
-  { path:'editlibros', component:EditlibrosComponent},
+  { path:'editlibros/:id/:tipo_op', component:EditlibrosComponent},
   { path:'prestamos', component:PrestamosComponent, canActivate:[authsessionGuard]},
   { path:'editprestamos', component:EditprestamosComponent},
   { path:'usuario', component:UsuarioComponent},
