@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { LibrosComponent } from './pages/libros/libros.component';
 import { EditlibrosComponent } from './pages/editlibros/editlibros.component';
@@ -19,12 +18,11 @@ const routes: Routes = [
   { path:'login', component:LoginComponent },
   { path:'register', component:RegisterComponent},
   { path:'admin', component:AdminComponent},
-  { path:'configuracion', component:ConfiguracionComponent, canActivate:[authsessionGuard]},
   { path:'usuarios', component:UsuariosComponent, canActivate:[authsessionGuard]},
   { path:'libros', component:LibrosComponent, canActivate:[authsessionGuard]},
   { path:'editlibros/:id/:tipo_op', component:EditlibrosComponent},
   { path:'prestamos', component:PrestamosComponent, canActivate:[authsessionGuard]},
-  { path:'editprestamos', component:EditprestamosComponent},
+  { path:'editprestamos/:id/:tipo_op', component:EditprestamosComponent},
   { path:'usuario', component:UsuarioComponent},
   { path:'librosuser', component:LibrosuserComponent},
   { path:'notificaciones', component:NotificacionesComponent},

@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./abm.component.css']  // Corregido: styleUrl → styleUrls
 })
 export class AbmComponent {
-  @Input() entidad!: 'usuario' | 'libro';  // Indica si es usuario o libro
-  @Input() item_id: string = 'null';        // ID del elemento (usuario/libro)
+  @Input() entidad!: 'usuario' | 'libro' | 'prestamo';  // Indica si es usuario o libro o prestamo
+  @Input() item_id: string = 'null';        // ID del elemento (usuario/libro/prestamo)
   @Input() tipoOperacion!: string;          // Crear o Editar
 }

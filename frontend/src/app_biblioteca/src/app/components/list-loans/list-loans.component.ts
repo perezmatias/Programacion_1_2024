@@ -8,35 +8,35 @@ import { Router } from '@angular/router';
 })
 export class ListLoansComponent {
   searchQuery = '';
-  arrayUsuarios = [
+  arrayPrestamos = [
     {
       id: 1,
-      nombre: 'Carlos'
+      nombre: 'Terror'
     },
     {
       id: 2,
-      nombre: 'Juan'
+      nombre: 'Accion'
     },
     {
       id: 3,
-      nombre: 'Pedro'
+      nombre: 'Fantasia'
     },
     {
       id: 4,
-      nombre: 'Usuario 4'
+      nombre: 'Misterio'
     }
   ]
-  filteredUsers = [...this.arrayUsuarios]
+  filteredLoans = [...this.arrayPrestamos]
   constructor(
     private router: Router
   ){
   } 
-  editarusuario(user:any) {
-    console.log('Estoy editando', user);
-    this.router.navigate(['/usuario/'+user.id+'/Editar']);
+  editarprestamo(loan: any) {
+    console.log('Estoy editando', loan);
+    this.router.navigate(['/editprestamos/' + loan.id + '/Editar']);
   }
-  buscar() {
-    console.log('buscar: ', this.searchQuery);
-    this.filteredUsers = this.arrayUsuarios.filter(user => user.nombre.includes(this.searchQuery));
+
+  buscar(query: string) {
+    this.filteredLoans = this.arrayPrestamos.filter(loan => loan.nombre.toLowerCase().includes(query.toLowerCase()));
   }
 }

@@ -27,6 +27,17 @@
             <label for="isbn" class="form-label">ISBN</label>
             <input type="text" class="form-control" id="isbn">
           </div>
+
+          <!-- Campos específicos para Prestamo -->
+          <div *ngIf="entidad === 'prestamo'" class="mb-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="usuario">
+          </div>
+  
+          <div *ngIf="entidad === 'prestamo'" class="mb-3">
+            <label for="libro" class="form-label">libro</label>
+            <input type="text" class="form-control" id="libro">
+          </div>
         </form>
   
         <div>

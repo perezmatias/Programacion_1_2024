@@ -7,7 +7,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { NavComponent } from './components/nav/nav.component';
-import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { SearchComponent } from './components/search/search.component';
 import { LibrosComponent } from './pages/libros/libros.component';
@@ -32,7 +31,6 @@ import { EditusersComponent } from './pages/editusers/editusers.component';
     RegisterComponent,
     AdminComponent,
     NavComponent,
-    ConfiguracionComponent,
     UsuariosComponent,
     SearchComponent,
     LibrosComponent,
