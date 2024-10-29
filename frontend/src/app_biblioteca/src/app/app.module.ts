@@ -16,7 +16,7 @@ import { EditprestamosComponent } from './pages/editprestamos/editprestamos.comp
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { LibrosuserComponent } from './pages/librosuser/librosuser.component';
 import { NotificacionesComponent } from './pages/notificaciones/notificaciones.component';
-import { HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { AbmComponent } from './components/abm/abm.component';

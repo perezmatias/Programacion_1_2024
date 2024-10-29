@@ -1,6 +1,5 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,7 @@ export class UsuarioService {
 
     let headers = new HttpHeaders ({
       'Content-type': 'application/json',
-      'Authorization': `Bearer $(auth_token)`
+      'Authorization': `Bearer ${auth_token}`
     })
 
     const requestOptions = {headers: headers}
