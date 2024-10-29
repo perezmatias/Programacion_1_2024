@@ -51,6 +51,16 @@ export class ListUsersComponent {
     this.router.navigate(['/editusers/' + user.id + '/Editar']);
   }
 
+  deleteUser(id: string) {
+    if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+      this.usuarioService.deleteUser(id).subscribe(response => {
+        console.log('Usuario eliminado', response);
+        this.arrayUsuarios = this.arrayUsuarios.filter(user => user.id !== id); // Filtrar el usuario eliminado
+        this.filteredUsers = [...this.arrayUsuarios]; // Actualizar la lista de usuarios filtrados
+      });
+    }
+  }
+
   buscar(query: string) {
     this.filteredUsers = this.arrayUsuarios.filter(user => user.nombre.toLowerCase().includes(query.toLowerCase()));
   }
