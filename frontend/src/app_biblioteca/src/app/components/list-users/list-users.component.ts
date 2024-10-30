@@ -9,28 +9,16 @@ import { UsuarioService } from '../../services/usuario.service';
 })
 export class ListUsersComponent {
   searchQuery = '';
-  // arrayUsuarios = [
-  //   {
-  //     id: 1,
-  //     nombre: 'Carlos'
-  //   },
-  //   {
-  //     id: 2,
-  //     nombre: 'Juan'
-  //   },
-  //   {
-  //     id: 3,
-  //     nombre: 'Pedro'
-  //   },
-  //   {
-  //     id: 4,
-  //     nombre: 'Usuario 4'
-  //   }
-  // ]
 
-  arrayUsuarios:any[] = []
+  rolFilter = '';
 
-  filteredUsers:any[] = []
+  arrayUsuarios:any[] = [];
+
+  filteredUsers:any[] = [];
+
+  total: number = 0; // Total de usuarios
+  pages: number = 0; // Total de páginas
+  currentPage: number = 1; // Página actual
 
   constructor(
     private router: Router,
@@ -39,11 +27,29 @@ export class ListUsersComponent {
   } 
 
   ngOnInit() {
-    this.usuarioService.getUsers().subscribe((rta:any) => {
-      console.log('usuarios api: ',rta);
+    this.loadUsers();
+  }
+
+  loadUsers(page: number = 1) {
+    this.usuarioService.getUsers(page, 10).subscribe((rta: any) => {
+      console.log('usuarios api: ', rta);
       this.arrayUsuarios = rta.usuarios || [];
-      this.filteredUsers = [...this.arrayUsuarios]
-    })
+      this.filteredUsers = [...this.arrayUsuarios];
+      this.total = rta.total;
+      this.pages = rta.pages;
+      this.currentPage = page; // Actualizar la página actual
+    });
+  }
+
+  aplicarFiltros() {
+    this.filteredUsers = this.arrayUsuarios.filter(user => {
+      const matchesNombre = user.nombre.toLowerCase().includes(this.searchQuery.toLowerCase());
+      const matchesApellido = user.apellido.toLowerCase().includes(this.searchQuery.toLowerCase());
+      const matchesRol = user.rol.toLowerCase().includes(this.rolFilter.toLowerCase());
+
+      // Retorna verdadero si coincide con nombre, apellido o rol
+      return (matchesNombre || matchesApellido) && matchesRol;
+    });
   }
 
   editarusuario(user: any) {
@@ -62,6 +68,24 @@ export class ListUsersComponent {
   }
 
   buscar(query: string) {
-    this.filteredUsers = this.arrayUsuarios.filter(user => user.nombre.toLowerCase().includes(query.toLowerCase()));
+    this.searchQuery = query; // Actualiza la consulta de búsqueda
+    this.aplicarFiltros(); // Aplica los filtros después de actualizar la búsqueda
+  }
+
+  cambiarRol(nuevoRol: string) {
+    this.rolFilter = nuevoRol; // Actualiza el filtro de rol
+    this.aplicarFiltros(); // Aplica los filtros después de actualizar el rol
+  }
+
+  nextPage() {
+    if (this.currentPage < this.pages) {
+      this.loadUsers(this.currentPage + 1);
+    }
+  }
+
+  previousPage() {
+    if (this.currentPage > 1) {
+      this.loadUsers(this.currentPage - 1);
+    }
   }
 }

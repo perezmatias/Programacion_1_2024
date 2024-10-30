@@ -1,9 +1,15 @@
 <div class="container">
   <h2 class="text-center mb-4">Lista de Usuarios</h2>
   <app-search (searchChange)="buscar($event)"></app-search>
+
+  <div class="mb-3">
+    <label for="rolFilter" class="form-label">Filtrar por Rol</label>
+    <input type="text" class="form-control" id="rolFilter" [(ngModel)]="rolFilter" (ngModelChange)="cambiarRol($event)" placeholder="Ingresa rol">
+  </div>
+
   <ul class="list-group">
     <li *ngFor="let usuario of filteredUsers" class="list-group-item d-flex justify-content-between align-items-center">
-      <p>{{ usuario.nombre }}</p>
+      <p>{{ usuario.nombre }} {{ usuario.apellido }} </p>
       <div>
         <button class="btn btn-primary btn-sm me-2" (click)="editarusuario(usuario)">
           <i class="fa-solid fa-pen-to-square"></i>
@@ -14,6 +20,13 @@
       </div>
     </li>
   </ul>
+
+  <div class="d-flex justify-content-between mt-4">
+    <button class="btn btn-secondary" (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+    <span>Página {{ currentPage }} de {{ pages }}</span>
+    <button class="btn btn-secondary" (click)="nextPage()" [disabled]="currentPage === pages">Siguiente</button>
+  </div>
+
   <a class="btn btn-primary ms-2" routerLink="/editusers/null/Alta">
     <i class="fa-solid fa-plus"></i>
   </a>
