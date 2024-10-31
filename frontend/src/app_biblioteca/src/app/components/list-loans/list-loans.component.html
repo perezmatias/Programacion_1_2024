@@ -1,20 +1,33 @@
 <div class="container">
     <h2 class="text-center mb-4">Lista de Prestamos</h2>
     <app-search (searchChange)="buscar($event)"></app-search>
+
+    <div class="mb-3">
+      <label for="idFilter" class="form-label">Filtrar por ID</label>
+      <input type="text" class="form-control" id="idFilter" [(ngModel)]="idFilter" (ngModelChange)="cambiarId($event)" placeholder="Ingresa id">
+    </div>
+
     <ul class="list-group">
       <li *ngFor="let prestamo of filteredLoans" class="list-group-item d-flex justify-content-between align-items-center">
-        <p>{{ prestamo.nombre }}</p>
+        <p>{{ prestamo.Fecha_retiro }} {{ prestamo.Fecha_devolucion }}</p>
         <div>
           <button class="btn btn-primary btn-sm me-2" (click)="editarprestamo(prestamo)">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn btn-danger btn-sm">
+          <button class="btn btn-danger btn-sm" (click)="deletePrestamo(prestamo.id)">
             <i class="fa-solid fa-trash"></i>
           </button>
         </div>
       </li>
     </ul>
+
     <a class="btn btn-primary ms-2" routerLink="/editprestamos/null/Alta">
       <i class="fa-solid fa-plus"></i>
     </a>
+
+    <div class="d-flex justify-content-between mt-4">
+      <button class="btn btn-secondary" (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+      <span>Página {{ currentPage }} de {{ pages }}</span>
+      <button class="btn btn-secondary" (click)="nextPage()" [disabled]="currentPage === pages">Siguiente</button>
+    </div>
 </div>

@@ -1,6 +1,12 @@
 <div class="container">
     <h2 class="text-center mb-4">Lista de Libros</h2>
     <app-search (searchChange)="buscar($event)"></app-search>
+
+    <div class="mb-3">
+      <label for="autorFilter" class="form-label">Filtrar por Autor</label>
+      <input type="text" class="form-control" id="autorFilter" [(ngModel)]="autorFilter" (ngModelChange)="cambiarAutor($event)" placeholder="Ingresa autor">
+    </div>
+    
     <ul class="list-group">
       <li *ngFor="let libro of filteredBooks" class="list-group-item d-flex justify-content-between align-items-center">
         <p>{{ libro.nombre }}</p>
@@ -8,13 +14,20 @@
           <button class="btn btn-primary btn-sm me-2" (click)="editarlibro(libro)">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn btn-danger btn-sm">
+          <button class="btn btn-danger btn-sm" (click)="deleteLibro(libro.id)">
             <i class="fa-solid fa-trash"></i>
           </button>
         </div>
       </li>
     </ul>
+
     <a class="btn btn-primary ms-2" routerLink="/editlibros/null/Alta">
       <i class="fa-solid fa-plus"></i>
     </a>
+
+    <div class="d-flex justify-content-between mt-4">
+      <button class="btn btn-secondary" (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+      <span>Página {{ currentPage }} de {{ pages }}</span>
+      <button class="btn btn-secondary" (click)="nextPage()" [disabled]="currentPage === pages">Siguiente</button>
+    </div>
   </div>

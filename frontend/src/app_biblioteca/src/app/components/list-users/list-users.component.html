@@ -21,13 +21,13 @@
     </li>
   </ul>
 
+  <a class="btn btn-primary ms-2" routerLink="/editusers/null/Alta">
+    <i class="fa-solid fa-plus"></i>
+  </a>
+
   <div class="d-flex justify-content-between mt-4">
     <button class="btn btn-secondary" (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
     <span>Página {{ currentPage }} de {{ pages }}</span>
     <button class="btn btn-secondary" (click)="nextPage()" [disabled]="currentPage === pages">Siguiente</button>
   </div>
-
-  <a class="btn btn-primary ms-2" routerLink="/editusers/null/Alta">
-    <i class="fa-solid fa-plus"></i>
-  </a>
 </div>
